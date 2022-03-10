@@ -4,13 +4,12 @@ The heartneat app is an interactive HCI application intended to be used with mob
 # Requirements
 Node.js: This app runs using a local server with node js. 
   Install
-    windows: https://nodejs.org/en/download/
+  Windows: https://nodejs.org/en/download/
   ```
-
   npm # check if npm has installed correctly
   ```
+  Linux:
   ```
- #Linux:
  sudo apt install nodejs
   ```
 View Engine: ejs
@@ -26,5 +25,4 @@ Once the requirements are fufulled open a command line in the repo directory and
 ```
 
 # TODO
-
 -Add specific instructions to setup project for different IDEs 
