@@ -2,9 +2,9 @@
 The heartneat app is an interactive HCI application intended to be used with mobile devices. Heart neat gives users experiences of heartbeat using the phones vibration system.
 
 # Requirements
-Node.js: This app runs using a local server with node js. 
-  Install
-  Windows: https://nodejs.org/en/download/
+Node.js: This app runs using a local server with node js. <br/>
+  Install<br/>
+  Windows: https://nodejs.org/en/download/ <br/>
   ```
   npm # check if npm has installed correctly
   ```
@@ -12,16 +12,16 @@ Node.js: This app runs using a local server with node js.
   ```
  sudo apt install nodejs
   ```
-View Engine: ejs
+View Engine: ejs <br/>
 
-IDE: 
-    Recommended
-      WebStorm (NOT FREE): https://www.jetbrains.com/webstorm/
-      VS Code (FREE): https://code.visualstudio.com/
+IDE: <br/>
+    Recommended<br/>
+      WebStorm (NOT FREE): https://www.jetbrains.com/webstorm/ <br/>
+      VS Code (FREE): https://code.visualstudio.com/ <br/>
 
 # Build Instructions
-Once the requirements are fufulled open a command line in the repo directory and run: 
-node .
+Once the requirements are fufulled open a command line in the repo directory and run: <br/>
+node . <br/>
 
 
 # TODO
