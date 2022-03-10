@@ -21,7 +21,7 @@ IDE:
 
 # Build Instructions
 Once the requirements are fufulled open a command line in the repo directory and run: 
-``` node .
+``` node '.'
 ```
 
 # TODO
