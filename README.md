@@ -23,6 +23,9 @@ IDE: <br/>
 Once the requirements are fufulled open a command line in the repo directory and run: <br/>
 node . <br/>
 
-
+# Resources
+Express: https://www.youtube.com/watch?v=SccSCuHhOw0&t=1748s&ab_channel=WebDevSimplified
+Node.js: https://www.youtube.com/watch?v=ENrzD9HAZK4&ab_channel=Fireship
+ 
 # TODO
 -Add specific instructions to setup project for different IDEs 
