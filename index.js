@@ -1,21 +1,22 @@
 const { readFile } = require('fs').promises;
 const express = require('express');
 const {response} = require("express");
-
+const open = require('open');
 const app = express();
 
-app.set('view engine', 'ejs')
-app.use(logger)
-app.use(express.static("public"))
+app.set('view engine', 'ejs');
+app.use(logger);
+app.use(express.static(__dirname + "/public/"));
 app.get('/' , async (req, res) =>{
-    res.render("index", {text:'World'})
+    res.render("index", {text:'World'});
 });
 
-const userRouter = require('./routes/home')
+const userRouter = require('./routes/home');
 
 app.use('/home', userRouter)
 
 app.listen(process.env.PORT || 3000, () => console.log('App is available on http://localhost:3000'));
+open('http://localhost:3000/home');
 
 function logger(req, res, next) {
     console.log("Path accessed " + req.originalUrl)
