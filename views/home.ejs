@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Welcome to Home page</title>
-    <link rel="stylesheet" href="/css/test.css" />
+    <link rel="stylesheet" href="./css/test.css" />
   </head>
   <body>
     <div class="Menu">
@@ -42,6 +42,7 @@
       <img class="Picture_Frame" src="./images/question.png" alt="" />
     </div>
     <img class="Picture_Frame" src="./images/heart.png" alt="" />
+    <p>Current BPM: <span id="BPM_Val"></span></p>
     <div class="Slider_Container">
       <input
         type="range"
@@ -52,6 +53,7 @@
         id="BPM_Range"
       />
     </div>
+    <script type="text/javascript" src="/js/home.js"></script>
     <div class="number_input">
       <label for="BPM_Custom">Input Custom BPM:</label>
       <input
