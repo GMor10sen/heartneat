@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Welcome to Home page</title>
-    <link rel="stylesheet" href="/css/test.css" />
+    <link rel="stylesheet" href="./css/test.css" />
   </head>
   <body>
     <div class="Menu">
@@ -25,14 +25,14 @@
       <p>Turn Off Animations</p>
       <label class="switch">
         <label for="checkbox"></label>
-        <input type="checkbox" />
+        <input type="checkbox" id="vibration_switch"/>
         <span class="slider_switch"></span>
       </label>
 
       <p>Replace Vibration with Sound</p>
       <label class="switch">
         <label for="checkbox"></label>
-        <input type="checkbox" />
+        <input type="checkbox"/>
         <span class="slider_switch"></span>
       </label>
       <p>Include Animal Information</p>
@@ -42,6 +42,7 @@
       <img class="Picture_Frame" src="./images/question.png" alt="" />
     </div>
     <img class="Picture_Frame" src="./images/heart.png" alt="" />
+    <p>Current BPM: <span id="BPM_Val"></span></p>
     <div class="Slider_Container">
       <input
         type="range"
@@ -60,9 +61,9 @@
         name="BPM_Custom"
         min="0"
         max="1200"
+        value="60"
       />
     </div>
-
     <div class="text_block">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
@@ -89,5 +90,6 @@
         reprehenderit assumenda optio rerum reiciendis deleniti excepturi.
       </p>
     </div>
+    <script type="text/javascript" src="/js/home.js"></script>s
   </body>
 </html>

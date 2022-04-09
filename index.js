@@ -15,6 +15,7 @@ const userRouter = require('./routes/home');
 
 app.use('/home', userRouter)
 
+//app.listen(3000, '192.168.56.1');
 app.listen(process.env.PORT || 3000, () => console.log('App is available on http://localhost:3000'));
 open('http://localhost:3000/home');
 
