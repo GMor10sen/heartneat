@@ -25,14 +25,14 @@
       <p>Turn Off Animations</p>
       <label class="switch">
         <label for="checkbox"></label>
-        <input type="checkbox" />
+        <input type="checkbox" id="vibration_switch"/>
         <span class="slider_switch"></span>
       </label>
 
       <p>Replace Vibration with Sound</p>
       <label class="switch">
         <label for="checkbox"></label>
-        <input type="checkbox" />
+        <input type="checkbox"/>
         <span class="slider_switch"></span>
       </label>
       <p>Include Animal Information</p>
@@ -53,7 +53,6 @@
         id="BPM_Range"
       />
     </div>
-    <script type="text/javascript" src="/js/home.js"></script>
     <div class="number_input">
       <label for="BPM_Custom">Input Custom BPM:</label>
       <input
@@ -62,9 +61,9 @@
         name="BPM_Custom"
         min="0"
         max="1200"
+        value="60"
       />
     </div>
-
     <div class="text_block">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
@@ -91,5 +90,7 @@
         reprehenderit assumenda optio rerum reiciendis deleniti excepturi.
       </p>
     </div>
+    <script type="text/javascript" src="/js/home.js"></script>
+    <script type="text/javascript" src="/js/vibration.js"></script>
   </body>
 </html>
