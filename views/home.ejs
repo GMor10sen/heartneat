@@ -8,7 +8,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Welcome to Home page</title>
-    <link rel="stylesheet" href="./css/test.css" />
+    <link rel="stylesheet" href="./css/home.css" />
   </head>
   <body>
     <div class="Menu">
@@ -51,8 +51,17 @@
         </ul>
     </div>
     <div class="Other_Options">
-      <img class="Picture_Frame" src="./images/Plus.png" alt="" />
-      <img class="Picture_Frame" src="./images/question.png" alt="" />
+      <a href="/home/index">
+        <img class="Picture_Frame" src="./images/Plus.png" alt="" />
+      </a>
+      <a href="/home/quiz">
+        <img
+          class="Picture_Frame"
+          src="./images/question.png"
+          href="index_quiz.ejs"
+          alt=""
+        />
+      </a>
     </div>
     <img class="Picture_Frame" src="./images/heart.png" alt="" />
     <p>Current BPM: <span id="BPM_Val"></span></p>
