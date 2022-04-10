@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.use(logger);
 app.use(express.static(__dirname + "/public/"));
 app.get('/' , async (req, res) =>{
-    res.render("index", {text:'World'});
+    res.render("home", {text:'World'});
 });
 
 const userRouter = require('./routes/home');
