@@ -8,9 +8,22 @@
 .Menu{
   background-color: rgb(172, 3, 172);
   color: white;
+  overflow: hidden;
   font-weight: 500;
   text-align: center;
 }
+
+.Menu a.icon {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 1190px;
+}
+
+.Menu #myLinks {
+  display: none;
+}
+
 .slider{
   width: 75%;
 }
@@ -86,3 +99,5 @@ input:checked + .slider_switch {
 input:checked + .slider_switch:before {
   transform: translateX(60px);
 }
+
+
