@@ -5,7 +5,10 @@ let infowindow;
 let currentInfoWindow;
 let service;
 let infoPane;
+
+var search_type = document.getElementById('search_type');
 let searchName = 'Cardiologists';
+search_type.innerHTML = searchName;
 
 var cardiologists_toggle = document.getElementById('Cardiologist');
 var gym_toggle = document.getElementById('Gym');
@@ -19,6 +22,7 @@ cardiologists_toggle.addEventListener('change', (event) =>{
   if (event.target.checked == true) {
     console.log('Gyms has changed to true attempting init map');
     searchName = 'Cardiologists';
+    search_type.innerHTML = searchName;
     initMap();
   }
 });
@@ -28,6 +32,7 @@ gym_toggle.addEventListener('change', (event) =>{
   if (event.target.checked == true) {
     console.log('Gyms has changed to true attempting init map');
     searchName = 'gyms';
+    search_type.innerHTML = searchName;
     initMap();
   }
 });
@@ -36,6 +41,7 @@ nutritionist_toggle.addEventListener('change', (event) =>{
   if (event.target.checked == true) {
     console.log('Nutritionist has changed to true attempting init map');
     searchName = 'Nutritionist';
+    search_type.innerHTML = searchName;
     initMap();
   }
 });
