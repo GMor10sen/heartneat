@@ -1,12 +1,50 @@
+let pos;
 let map;
-let service;
-let infowindow;
 let bounds;
+let infowindow;
+let currentInfoWindow;
+let service;
+let infoPane;
+let searchName = 'Cardiologists';
+
+var cardiologists_toggle = document.getElementById('Cardiologist');
+var gym_toggle = document.getElementById('Gym');
+var nutritionist_toggle = document.getElementById('Nutritionist');
+console.log("Cardiologist object checked: " + cardiologists_toggle.checked);
+console.log("gym object checked: " + cardiologists_toggle.checked);
+console.log("nutritionist checked: " + cardiologists_toggle.checked);
+
+cardiologists_toggle.addEventListener('change', (event) =>{
+  console.log('Cardiologists target event objectP: ' + event.target);
+  if (event.target.checked == true) {
+    console.log('Gyms has changed to true attempting init map');
+    searchName = 'Cardiologists';
+    initMap();
+  }
+});
+
+gym_toggle.addEventListener('change', (event) =>{
+  //We don't want to do anything if the checked value isn't true (should never be false)
+  if (event.target.checked == true) {
+    console.log('Gyms has changed to true attempting init map');
+    searchName = 'gyms';
+    initMap();
+  }
+});
+
+nutritionist_toggle.addEventListener('change', (event) =>{
+  if (event.target.checked == true) {
+    console.log('Nutritionist has changed to true attempting init map');
+    searchName = 'Nutritionist';
+    initMap();
+  }
+});
 
 function initMap() {
     bounds = new google.maps.LatLngBounds();
     infowindow = new google.maps.InfoWindow;
     currentInfoWindow = infowindow;
+    infoPane = document.getElementById('panel');
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
           pos = {
@@ -53,8 +91,9 @@ function getNearbyPlaces(position) {
     let request = {
       location: position,
       rankBy: google.maps.places.RankBy.DISTANCE,
-      keyword: 'Cardiologists'
+      keyword: searchName
     };
+    console.log('Keyword used in request: ' + searchName);
     service = new google.maps.places.PlacesService(map);
     service.nearbySearch(request, nearbyCallback);
 }
@@ -72,7 +111,7 @@ function createMarkers(places) {
         map: map,
         title: place.name
       });
-      /* TODO: Step 4B: Add click listeners to the markers */
+
       // Add click listener to each marker
       google.maps.event.addListener(marker, 'click', () => {
         let request = {
@@ -105,8 +144,55 @@ function showDetails(placeResult, marker, status) {
       placeInfowindow.open(marker.map, marker);
       currentInfoWindow.close();
       currentInfoWindow = placeInfowindow;
-      //showPanel(placeResult);
+      showPanel(placeResult);
     } else {
       console.log('showDetails failed: ' + status);
     }
+  }
+
+  function showPanel(placeResult) {
+    // If infoPane is already open, close it
+    if (infoPane.classList.contains("open")) {
+      infoPane.classList.remove("open");
+    }
+    // Clear the previous details
+    while (infoPane.lastChild) {
+      infoPane.removeChild(infoPane.lastChild);
+    }
+    /* TODO: Step 4E: Display a Place Photo with the Place Details */
+    // Add the primary photo, if there is one
+    if (placeResult.photos) {
+      let firstPhoto = placeResult.photos[0];
+      let photo = document.createElement('img');
+      photo.classList.add('search_image');
+      photo.src = firstPhoto.getUrl();
+      infoPane.appendChild(photo);
+    }
+    // Add place details with text formatting
+    let name = document.createElement('h1');
+    name.classList.add('place');
+    name.textContent = placeResult.name;
+    infoPane.appendChild(name);
+    if (placeResult.rating) {
+      let rating = document.createElement('p');
+      rating.classList.add('details');
+      rating.textContent = `Rating: ${placeResult.rating} \u272e`;
+      infoPane.appendChild(rating);
+    }
+    let address = document.createElement('p');
+    address.classList.add('details');
+    address.textContent =`Address: ${placeResult.formatted_address}`;
+    infoPane.appendChild(address);
+    if (placeResult.website) {
+      let websitePara = document.createElement('p');
+      let websiteLink = document.createElement('a');
+      let websiteUrl = document.createTextNode(placeResult.website);
+      websiteLink.appendChild(websiteUrl);
+      websiteLink.title = placeResult.website;
+      websiteLink.href = placeResult.website;
+      websitePara.appendChild(websiteLink);
+      infoPane.appendChild(websitePara);
+    }
+    // Open the infoPane
+    infoPane.classList.add("open");
   }
