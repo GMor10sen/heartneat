@@ -1,0 +1,17 @@
+.Picture_Frame_Small{
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+.Picture_Frame_Medium{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .Button_Options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
