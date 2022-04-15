@@ -42,9 +42,9 @@ document.getElementById('vibration_switch').addEventListener('change', (event) =
 	var doVibrate = event.currentTarget.checked;
 
 	//Cancel event if vibration is not supported
-	//Only alert if they are trying to turn "on" vibrate
 	if (!("vibrate" in navigator)) {
-		if (doVibrate === 'true') {
+		if (doVibrate === true) {
+			//Only alert if they are trying to turn "on" vibrate
 			alert("Vibrate not supported!");
 		}
 		return;
