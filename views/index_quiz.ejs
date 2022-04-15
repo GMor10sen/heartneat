@@ -1,17 +1,44 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
+<link
+  rel="stylesheet"
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+/>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Welcome to Quiz page</title>
-</head>
-<body>
-<h1>Quiz Page</h1>
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/buttons.css" />
+  </head>
+  <body>
+    <div class="Menu">
+      <h2 style="font-size: 35px">MENU</h2>
+      <div id="myLinks">
+        <p class="Menu_Option">Use these buttons to naviate to another page!</p>
+        <div class="Button_Options">
+          <a href="/home/index">
+            <img class="Picture_Frame_Small" src="/images/Plus.png" alt="" />
+          </a>
+          <a href="/home">
+            <img
+              class="Picture_Frame_Small"
+              src="/images/heart_button.png"
+              href="home.ejs"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+      <!-- Hamburger Menu -->
+      <ul class="w3-ul">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <li class="w3-xxlarge"><i class="fa fa-bars"></i></li>
+        </a>
+      </ul>
+    </div>
 
-
-<div class="textbox">
-Can you name two different heart diseases? 
-</div>
-
-</div>
-</body>
+    <script type="text/javascript" src="/js/burgerStyle.js"></script>
+  </body>
 </html>

@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
+<link
+  rel="stylesheet"
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+/>
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Welcome to Home page</title>
     <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/buttons.css" />
   </head>
   <body>
     <div class="Menu">
       <h2 style="font-size: 35px">MENU</h2>
-        <div id="myLinks">
-          <p class="Menu_Option">How Much Information Would You Like?</p>
-          <input type="radio" id="Little" name="info_amount" value="30" />
-          <label for="Little">A Little Bit</label><br />
-          <input type="radio" id="Medium" name="info_amount" value="60" />
-          <label for="Medium">A Medium Amount</label><br />
-          <input type="radio" id="Lot" name="info_amount" value="100" />
-          <label for="Lot">A Lot of Information</label><br /><br />
-        
-          <label class="switch">
-            <label for="checkbox"></label>
-            <input type="checkbox" />
-            <span class="slider_switch"></span>
-          </label>
+      <div id="myLinks">
+        <p class="Menu_Option">How Much Information Would You Like?</p>
+        <input type="radio" id="Little" name="info_amount" value="30" />
+        <label for="Little">A Little Bit</label><br />
+        <input type="radio" id="Medium" name="info_amount" value="60" />
+        <label for="Medium">A Medium Amount</label><br />
+        <input type="radio" id="Lot" name="info_amount" value="100" />
+        <label for="Lot">A Lot of Information</label><br /><br />
 
-          <p>Turn Off Animations</p>
-          <label class="switch">
-            <label for="checkbox"></label>
-            <input type="checkbox" id="vibration_switch"/>
-            <span class="slider_switch"></span>
-          </label>
+        <label class="switch">
+          <label for="checkbox"></label>
+          <input type="checkbox" />
+          <span class="slider_switch"></span>
+        </label>
 
-          <p>Replace Vibration with Sound</p>
-          <label class="switch">
-            <label for="checkbox"></label>
-            <input type="checkbox"/>
-            <span class="slider_switch"></span>
-          </label>
-          <p>Include Animal Information</p>
-        </div>
-        <!-- Hamburger Menu -->
-        <ul class="w3-ul">
+        <p>Turn Off Animations</p>
+        <label class="switch">
+          <label for="checkbox"></label>
+          <input type="checkbox" id="vibration_switch" />
+          <span class="slider_switch"></span>
+        </label>
+
+        <p>Replace Vibration with Sound</p>
+        <label class="switch">
+          <label for="checkbox"></label>
+          <input type="checkbox" />
+          <span class="slider_switch"></span>
+        </label>
+        <p>Include Animal Information</p>
+      </div>
+      <!-- Hamburger Menu -->
+      <ul class="w3-ul">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <li class="w3-xxlarge"><i class="fa fa-bars"></i></li>
         </a>
-        </ul>
+      </ul>
     </div>
-    <div class="Other_Options">
+
+    <div class="Button_Options">
       <a href="/home/index">
-        <img class="Picture_Frame" src="./images/Plus.png" alt="" />
+        <img class="Picture_Frame_Medium" src="./images/Plus.png" alt="" />
       </a>
       <a href="/home/quiz">
         <img
-          class="Picture_Frame"
+          class="Picture_Frame_Medium"
           src="./images/question.png"
           href="index_quiz.ejs"
           alt=""
         />
       </a>
     </div>
-    <img class="Picture_Frame" src="./images/heart.png" alt="" />
+    <img class="Picture_Frame_Medium" src="./images/heart.png" alt="" />
     <p>Current BPM: <span id="BPM_Val"></span></p>
     <div class="Slider_Container">
       <input
@@ -112,7 +118,7 @@
         reprehenderit assumenda optio rerum reiciendis deleniti excepturi.
       </p>
     </div>
-    <script type="text/javascript" src="/js/home.js"></script>s
-    <script type="text/javascript" src="/js/burgerStyle.js"></script>s
+    <script type="text/javascript" src="/js/home.js"></script>
+    <script type="text/javascript" src="/js/burgerStyle.js"></script>
   </body>
 </html>

@@ -1,28 +1,76 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
+<link
+  rel="stylesheet"
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+/>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Map page</title>
     <link rel="stylesheet" href="/css/map.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/buttons.css" />
+    
 </head>
 <body>
-<h1>Map Page</h1>
-<input type="radio" id="Cardiologist" name="Map_Selecction" value="30" />
-<label for="Cardiologist">Find local cardiologist</label><br />
-<input type="radio" id="Gym" name="Map_Selecction" value="60" />
-<label for="Gym">Find local gyms</label><br />
-<input type="radio" id="Nutritionist" name="Map_Selecction" value="100" />
-<label for="Nutritionist">Find local nutritionists</label><br /><br />
-<img src="" alt="">
 
+<!-- This is the menu -->
+<div class="Menu">
+    <h2 style="font-size: 35px">MENU</h2>
+    <div id="myLinks">
+        <p class="Menu_Option">Use these buttons to alter the map below to another page!</p>
+        <input type="radio" id="Cardiologist" name="Map_Selecction" value="30" />
+        <label for="Cardiologist">Find local cardiologist</label><br />
+        <input type="radio" id="Gym" name="Map_Selecction" value="60" />
+        <label for="Gym">Find local gyms</label><br />
+        <input type="radio" id="Nutritionist" name="Map_Selecction" value="100" />
+        <label for="Nutritionist">Find local nutritionists</label><br /><br />
+        <img src="" alt="">
+        </div>
+    </div>
+    <!-- Hamburger Menu -->
+    <ul class="w3-ul">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <li class="w3-xxlarge"><i class="fa fa-bars"></i></li>
+        </a>
+    </ul>
+    </div>
 </div>
+      
+<!-- Map is below  -->
 <div id="panel"></div> 
 <p>Current Search Type: <span id="search_type"></span></p>
 <div id="map"></div>
+
+<!-- Button options are below  -->
+<div class="Button_Options">
+    <a href="/home">
+        <img
+          class="Picture_Frame_Small"
+          src="/images/heart_button.png"
+          href="home.ejs"
+          alt=""
+        />
+      </a>
+    <a href="/home/quiz">
+      <img
+        class="Picture_Frame_Small"
+        src="/images/question.png"
+        href="index_quiz.ejs"
+        alt=""
+      />
+    </a>
+  </div>
+
+
+  <!-- scripts  -->
 <script
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeWdftMwwVIlpZLM1ePzBbkYvgjE7Oqf8&callback=initMap&libraries=places&v=weekly"
 async
 ></script>
 <script type="text/javascript" src="/js/map.js"></script>
+<script type="text/javascript" src="/js/burgerStyle.js"></script>
 </body>
 </html>
