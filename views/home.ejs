@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="/css/menu.css" />
     <link rel="stylesheet" href="/css/buttons.css" />
+    <!-- <link rel="stylesheet" href="/css/body.css" /> -->
   </head>
   <body>
     <div class="Menu">
@@ -58,19 +59,31 @@
 
     <div class="Button_Options">
       <a href="/home/index">
-        <img class="Picture_Frame_Medium" src="./images/Plus.png" alt="" />
+        <img class="Picture_Frame_Small" src="./images/Plus.png" alt="" />
       </a>
       <a href="/home/quiz">
         <img
-          class="Picture_Frame_Medium"
+          class="Picture_Frame_Small"
           src="./images/question.png"
           href="index_quiz.ejs"
           alt=""
         />
       </a>
     </div>
-    <img class="Picture_Frame_Medium" src="./images/heart.png" alt="" />
-    <p>Current BPM: <span id="BPM_Val"></span></p>
+
+    <!-- Main Heart Container  -->
+    <div class="Heart_Functionality_Container">
+      <img class="heart" src="./images/HeartOnly.png" alt="" />
+      <img class="circle" src="./images/Circle.png" alt="" />
+      <img style="opacity: 0" src="./images/Circle.png" alt="" />
+    </div>
+
+    <!-- Current BPM results  -->
+    <div class="BPM_Stats">
+      <p class="small_gap">Current BPM</p>
+      <span id="BPM_Val"></span>
+    </div>
+
     <div class="Slider_Container">
       <input
         type="range"
@@ -81,6 +94,7 @@
         id="BPM_Range"
       />
     </div>
+
     <div class="number_input">
       <label for="BPM_Custom">Input Custom BPM:</label>
       <input
@@ -92,32 +106,38 @@
         value="60"
       />
     </div>
-    <div class="text_block">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-        voluptatem sed, nulla at id vel eaque repellendus magnam ipsam corrupti
-        voluptatibus, fuga sint iusto obcaecati libero quae odio optio a fugit?
-        Ex quas optio accusantium tempora nisi officiis quibusdam,
-        exercitationem beatae cumque, expedita est incidunt. Nihil fugiat nulla
-        repellendus officia, facere sequi adipisci praesentium. Hic officia id
-        error sint corporis suscipit, dolores in reprehenderit incidunt laborum
-        dolor autem, atque ipsam consequatur cumque quas ea ipsum nisi.
-        Asperiores, tenetur tempora quam laborum nobis doloribus ipsa voluptates
-        ullam sapiente, ratione eligendi rem modi omnis quis expedita blanditiis
-        consectetur cum magni laboriosam eaque quia alias! Inventore aliquid,
-        illum, quos doloremque eum animi, rem maxime debitis sequi corrupti
-        nesciunt aperiam. Doloribus quae quis aspernatur a minima exercitationem
-        dicta! Alias, error, vel, praesentium facilis dolorem ipsum voluptatum
-        dolores eos blanditiis commodi iusto tempore reprehenderit? Beatae
-        provident, enim ratione similique quisquam suscipit vel asperiores,
-        molestias optio quo quae quibusdam fuga dolorem, ea atque placeat ipsam
-        quis laboriosam omnis accusantium sequi aut cumque. Doloremque nostrum
-        eos quod deleniti consequuntur! Inventore porro, officia neque
-        repellendus fuga voluptate! Laudantium repellat dolor quibusdam ipsum,
-        quia beatae temporibus consequatur corporis at alias magnam libero
-        reprehenderit assumenda optio rerum reiciendis deleniti excepturi.
+
+    <!-- Information  -->
+    <div class="info_background">
+      <img class="Picture_Frame_Large" src="./images/heart_test2.png" alt="" />
+      <p class="heart_info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore esse
+        dolor vel molestiae dolores excepturi alias hic dicta vitae tempora
+        laudantium consequuntur, earum, praesentium nemo deleniti distinctio
+        quibusdam quasi. Aperiam!
+      </p>
+
+      <!-- Button -->
+      <a href="https://www.heart.org/">
+        <button class="heart_button" type="button">Click Here</button>
+      </a>
+
+      <!-- Source -->
+      <p class="source overlaid">
+        Photo by
+        <a
+          href="https://unsplash.com/@element5digital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >Element5 Digital</a
+        >
+        on
+        <a
+          href="https://unsplash.com/s/photos/hearts?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >Unsplash</a
+        >
       </p>
     </div>
+
+    <!-- Scripts -->
     <script type="text/javascript" src="/js/home.js"></script>
     <script type="text/javascript" src="/js/burgerStyle.js"></script>
   </body>
