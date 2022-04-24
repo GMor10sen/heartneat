@@ -1,7 +1,7 @@
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
        #map {
-        height: 70%;
+        height: 50%;
       }
       
       /* Optional: Makes the sample page fill the window. */
@@ -12,12 +12,13 @@
         padding: 0;
       }
 
-      .search_image {
+      /* I personally don't think the pictures are necessary */
+      /* .search_image {
         max-width: 80%;
         max-height: 400px;
         width: fit-content;
         height: fit-content;
-      }
+      } */
 
 
     .map_information{
