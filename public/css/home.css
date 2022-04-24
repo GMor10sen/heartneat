@@ -1,6 +1,15 @@
 
 .slider{
   width: 75%;
+  height: 25px; /* Specified height */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 4;
 }
 
 .Slider_Container{
@@ -8,7 +17,12 @@
   text-align:center;
 }
 
-
+.Slider_Container::-webkit-slider-thumb { 
+  -webkit-appearance: none; 
+  cursor: pointer;
+  width: 5%; 
+  height: 20px; 
+} 
 
 /* Box Containing Heart */
 .Heart_Functionality_Container{
@@ -100,3 +114,11 @@
   align-self: center;
 }
 
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imageShow{
+  text-align: center;
+}
