@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/menu.css" />
     <link rel="stylesheet" href="/css/buttons.css" />
     <link rel="stylesheet" href="/css/body.css" />
+    <link rel="stylesheet" href="/css/quiz.css" />
   </head>
   <body>
     <div class="Menu">
@@ -40,9 +41,9 @@
       </ul>
     </div>
 
-    <img class="Picture_Frame_Medium" src="./images/picquiz.png" alt="" />
+    <img class="Picture_Frame_Small" src="/images/picquiz.jpg" alt="" />
 
-    <p>
+    <p class="quiz_source">
       Photo by
       <a
         href="https://unsplash.com/@towfiqu999999?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
@@ -54,6 +55,130 @@
         >Unsplash</a
       >
     </p>
+
+    <div class="Question_Box">
+
+      <h1>Custom Radio Buttons</h1>
+    <label class="container">One
+      <input type="radio" checked="checked" name="radio">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Two
+      <input type="radio" name="radio">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Three
+      <input type="radio" name="radio">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Four
+      <input type="radio" name="radio">
+      <span class="checkmark"></span>
+    </label>
+
+
+      <form>
+        <h2>What is the resting heart rate of a person?</h2>
+        <label class="Container"> 60 to 100 BPM 
+        <input type="radio" id="Norm" name="normal_rate" value="Answer" />
+        </label>
+       
+
+        <br />
+        <input type="radio" id="High" name="normal_rate" value="Wrong" />
+        <label for="High">110 to 150 BPM</label><br />
+        <input type="radio" id="Low" name="normal_rate" value="Wrong" />
+        <label for="Low">20 to 50 BPM</label>
+
+        <h2>What is the typical heartrate when a person sleeps?</h2>
+
+        <input type="radio" id="High" name="sleep_rate" value="Wrong" />
+        <label for="High">60 to 100 BPM</label><br />
+        <input type="radio" id="Extreme" name="sleep_rate" value="Wrong" />
+        <label for="Extreme">110 to 150 BPM</label><br />
+        <input type="radio" id="Norm" name="sleep_rate" value="Answer" />
+        <label for="Norm">40 to 50 BPM</label>
+
+        <h2>Which animal has the slowest heart rate?</h2>
+
+        <input type="radio" id="Shrimp" name="slowest_rate" value="Wrong" />
+        <label for="Shrimp">Shrimp</label><br />
+        <input type="radio" id="Whale" name="slowest_rate" value="Answer" />
+        <label for="Whale">Whale</label><br />
+        <input type="radio" id="Elephant" name="slowest_rate" value="Wrong" />
+        <label for="Elephant">Elephant</label>
+
+        <h2>How do you find your approximate maximum heart rate?</h2>
+
+        <input type="radio" id="Just_Right" name="max_rate" value="Answer" />
+        <label for="Just_Right">Subtract age from 220</label><br />
+        <input type="radio" id="Too_Low" name="max_rate" value="Wrong" />
+        <label for="Too_Low">Subtract age from 180</label><br />
+        <input type="radio" id="Adding" name="max_rate" value="Wrong" />
+        <label for="Adding">Add age by 25</label>
+
+        <h2>Which animal has the fastest heart rate?</h2>
+
+        <input type="radio" id="Moose" name="fastest_rate" value="Wrong" />
+        <label for="Moose">Moose</label><br />
+        <input type="radio" id="Worm" name="fastest_rate" value="Wrong" />
+        <label for="Worm">Alaskan Bullwom</label><br />
+        <input type="radio" id="Shrew" name="fastest_rate" value="Answer" />
+        <label for="Shrew">Pigmy Shrew</label>
+
+        <h2>What is arrhythmia?</h2>
+
+        <input type="radio" id="dance" name="fastest_rate" value="Wrong" />
+        <label for="dance"
+          >Condition in which the heart starts doing a dance</label
+        ><br />
+        <input type="radio" id="abnormal" name="fastest_rate" value="Answer" />
+        <label for="abnormal"
+          >A condition in which the heart beats with an irregular or abnormal
+          rhythm</label
+        ><br />
+        <input type="radio" id="faster" name="fastest_rate" value="Wrong" />
+        <label for="faster"
+          >A condition in which the heart beats at a faster BPM</label
+        >
+
+        <h2>Select <b>every</b> item from the list that is a heart disease:</h2>
+
+        <input type="checkbox" id="disease1" name="disease1" value="Wrong" />
+        <label for="disease1"> Mononucleosis </label><br />
+        <input type="checkbox" id="disease2" name="disease2" value="Answer" />
+        <label for="disease2"> Cardiomyopathy </label><br />
+        <input type="checkbox" id="disease3" name="disease3" value="Answer" />
+        <label for="disease3"> Coronary Artery Disease </label>
+        <br />
+        <input type="checkbox" id="disease4" name="disease4" value="Wrong" />
+        <label for="disease4"> Covid 32</label>
+
+        <h2>
+          Should you seek help if your heart rate <br>  is consistently outside the average range?
+        </h2>
+
+        <input type="radio" id="Accurate" name="TF" value="Answer" />
+        <label for="Accurate"> True </label>
+        <input type="radio" id="Incorrect" name="TF" value="Wrong" />
+        <label for="Incorrect"> False </label>
+      </div>
+
+    <div class="quiz_conclusion">
+        <h2>Please provide your feedback on this experience:</h2>
+
+        <textarea
+          name="Feedback"
+          rows="5"
+          cols="40"
+          class="Input_Paragraph"
+          placeholder="Please Write Your Feedback Here..."
+        ></textarea>
+        <br />
+
+        <input class="sub_button" type="submit" value="Submit" />
+      </form>
+    </div>
 
     <script type="text/javascript" src="/js/burgerStyle.js"></script>
   </body>
