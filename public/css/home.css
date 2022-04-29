@@ -34,7 +34,9 @@
 
 /* Elements Within Heart */
 .heart_element{
-  margin: auto;
+  position: absolute;
+  top: 45%;
+  left: 31%;
 }
 /* Heart And Circle */
 .heart {
@@ -65,6 +67,9 @@
 }
 /* Tombstone Animation */
 .tomb {
+  position: absolute;
+  top: 55%;
+  left: 36.5%;
   transition: transform 1s linear;
   animation-name: stone;
   animation-duration: 10s;
@@ -83,6 +88,9 @@
 }
 /* Whale Animation */
 .whale {
+  position: absolute;
+  top: 64%;
+  left: 39.7%;
   transition: transform 1s linear;
   animation-name: swimming;
   animation-duration: 5s;
@@ -101,6 +109,9 @@
 }
 /* Weights  Animation */
 .weight {
+  position: absolute;
+  top: 66%;
+  left: 34.4%;
   transition: transform 1s linear;
   animation-name: lift;
   animation-duration: 3s;
@@ -126,6 +137,9 @@
 
 /* Ants  Animation */
 .ants {
+  position: absolute;
+  top: 66%;
+  left: 36.5%;
   transition: transform 1s linear;
   animation-name: bug;
   animation-duration: 3s;
@@ -207,4 +221,13 @@
 .imageShow{
   text-align: center;
   margin: auto;
+}
+
+.imageShow {
+  width: 500px;
+  height: 440px;
+  border: 3px outset rgb(214, 233, 85);
+  background: rgb(255, 255, 255);
+  margin: auto;
+  padding: 15px 10px;
 }
