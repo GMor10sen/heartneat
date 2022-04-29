@@ -18,15 +18,14 @@ window.addEventListener('load', function() {
 	  i = Number(this.value) - 1;
 	  if (rangeslider.value == 0) {
 		images.children[0].style.display = 'block';
-	  } else if ((rangeslider.value >= 1) && (rangeslider.value <= 200)) {
-		images.children[0].style.display = 'block';
-		console.log(rangeslider.value);
-	  } else if((rangeslider.value > 200) && (rangeslider.value <= 500)){
+	  } else if ((rangeslider.value >= 1) && (rangeslider.value <= 100)) {
 		images.children[1].style.display = 'block';
-	  } else if((rangeslider.value > 500) && (rangeslider.value <= 750)){
+	  } else if((rangeslider.value > 100) && (rangeslider.value <= 500)){
 		images.children[2].style.display = 'block';
-	  } else if((rangeslider.value > 750) && (rangeslider.value <= 1200)){
+	  } else if((rangeslider.value > 500) && (rangeslider.value <= 750)){
 		images.children[3].style.display = 'block';
+	  } else if((rangeslider.value > 750) && (rangeslider.value <= 1200)){
+		images.children[4].style.display = 'block';
 	  }
 
 	});
