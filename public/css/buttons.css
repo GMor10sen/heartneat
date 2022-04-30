@@ -22,3 +22,51 @@
     flex-direction: row;
     justify-content: space-evenly;
   }
+
+  /* Home Page information button */
+  
+.heart_button{
+  width: 40%;
+  height: 120px;
+  border: none;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-size: xx-large;
+  font-weight: 600;
+  font-style: italic;
+  border-radius: 20px;
+  background-color: purple;
+  color: white;
+  transition: transform 1s linear, background 0.5s;
+}
+
+.heart_button:hover{
+  background-color: #0645a7;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Submission Button for quiz page */
+
+.sub_button {
+  width: 40%;
+  height: 120px;
+  border: none;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-size: xx-large;
+  font-weight: 600;
+  font-style: italic;
+  border-radius: 20px;
+  background-color: purple;
+  color: white;
+  transition: transform 1s linear, background 0.5s;
+}
+
+.sub_button:hover {
+  background-color: #0645a7;
+  color: white;
+  transform: scale(1.1);
+}
