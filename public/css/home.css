@@ -1,27 +1,243 @@
 
 .slider{
+  -webkit-appearance: none;
   width: 75%;
+  height: 20px;
+  border-radius: 5px;
+  background: #AC03AC;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  cursor: pointer;
 }
 
 .Slider_Container{
-  margin:  auto;
+  margin:  50px auto 50px auto;
   text-align:center;
 }
 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 125px;
+  height: 120px;
+  border: 0;
+  background: url("SmallHeart.png");
+  cursor: pointer;
+}
 
+.slider::-moz-range-thumb {
+  background: url("SmallHeart.png");
+  cursor: pointer;
+}
 
-.text_block{
- background-color: rgb(247, 219, 255);
- width: 80%;
- margin: auto;
- font-weight: 600;
- text-align: center;
+/* Box Containing Heart */
+.Heart_Functionality_Container{
+  margin: auto;
+  width: 30%;
+  position: relative;
 }
 
 
+/* Elements Within Heart */
+.heart_element{
+  position: absolute;
+  top: 45%;
+  left: 31%;
+}
+/* Heart And Circle */
+.heart {
+  transition: transform 1s linear;
+  animation-name: beating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; 
+}
+.circle{
+  position: absolute;
+  z-index: 1;
+}
+
+/* Heart Animation */
+@keyframes beating {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Tombstone Animation */
+.tomb {
+  position: absolute;
+  top: 53%;
+  left: 36.5%;
+  transition: transform 1s linear;
+  animation-name: stone;
+  animation-duration: 10s;
+  animation-iteration-count: infinite; 
+}
+@keyframes stone {
+  0% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+/* Whale Animation */
+.whale {
+  position: absolute;
+  top: 62%;
+  left: 39.7%;
+  transition: transform 1s linear;
+  animation-name: swimming;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; 
+}
+@keyframes swimming {
+  0% {
+    transform: rotate(10deg) translateY(-15px);
+  }
+  50% {
+    transform: rotate(-10deg) translateY(15px);
+  }
+  100% {
+    transform:  rotate(10deg) translateY(-15px);
+  }
+}
+/* Weights  Animation */
+.weight {
+  position: absolute;
+  top: 64%;
+  left: 34.4%;
+  transition: transform 1s linear;
+  animation-name: lift;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; 
+}
+@keyframes lift {
+  0% {
+    transform: scaleX(0.8);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  60% {
+    transform: scaleX(0.9);
+  }
+  65% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0.8);
+  }
+}
+
+/* Ants  Animation */
+.ants {
+  position: absolute;
+  top: 64%;
+  left: 36.5%;
+  transition: transform 1s linear;
+  animation-name: bug;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; 
+}
+@keyframes bug {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Information About the Heart */
+.info_background{
+ background-color: white;
+ width: 100%;
+ height: 400px;
+ margin: auto;
+ font-weight: 600;
+ text-align: center;
+ position: relative;
+}
+
+.heart_info{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: white;
+  font-size: x-large;
+}
+
+.heart_button{
+  position: absolute;
+  outline: 0; 
+  border: 0px;
+  background-color: blueviolet;
+  color: white;
+  width: 300px;
+  height: 100px;
+  font-size: x-large;
+  top: 140%;
+  left: 0%;
+}
+
+.heart_button:hover{
+  background-color: red;
+  color: white;
+}
+
+/* BPM Result Text */
+.BPM_Stats{
+  text-align: center;
+  font-size: x-large;
+}
+.small_gap{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 .number_input{
   margin: 20px auto 20px auto; 
   text-align: center;
   align-items: center;
   align-self: center;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imageShow{
+  text-align: center;
+  margin: auto;
+}
+
+.imageShow {
+  width: 500px;
+  height: 500px;
+  border: 3px outset rgb(214, 233, 85);
+  background: rgb(255, 255, 255);
+  margin: auto;
+  padding: 15px 10px;
 }

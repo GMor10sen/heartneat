@@ -1,0 +1,17 @@
+/* Disables Scrolling */
+/* html, body {margin: 0; height: 100%; overflow: hidden} */
+
+/* Information */
+.source{
+    text-align: center;
+    opacity: 0.8;
+    color: darkblue;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+  }
+
+.overlaid{
+  position: absolute;
+
+}
+  

@@ -10,10 +10,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Welcome to Home page</title>
+    <title>Welcome to Heartneat Home Page</title>
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="/css/menu.css" />
     <link rel="stylesheet" href="/css/buttons.css" />
+    <!-- <link rel="stylesheet" href="/css/body.css" /> -->
   </head>
   <body>
     <div class="Menu">
@@ -58,19 +59,41 @@
 
     <div class="Button_Options">
       <a href="/home/index">
-        <img class="Picture_Frame_Medium" src="./images/Plus.png" alt="" />
+        <img class="Picture_Frame_Small" src="./images/Plus.png" alt="" />
       </a>
       <a href="/home/quiz">
         <img
-          class="Picture_Frame_Medium"
+          class="Picture_Frame_Small"
           src="./images/question.png"
           href="index_quiz.ejs"
           alt=""
         />
       </a>
     </div>
-    <img class="Picture_Frame_Medium" src="./images/heart.png" alt="" />
-    <p>Current BPM: <span id="BPM_Val"></span></p>
+
+    <!-- Main Heart Container  -->
+    <!-- <div class="Heart_Functionality_Container"> -->
+    <!-- <img class="heart" src="./images/HeartOnly.png" alt="" /> -->
+    <!-- <img class="tomb" src="./images/RIP.png" alt="" /> -->
+    <!-- <img class="weight" src="./images/weights.png" alt="" /> -->
+    <!-- <img class="whale" src="./images/Whales.png" alt="" /> -->
+    <!-- <img class="circle" src="./images/Circle.png" alt="" />
+      <img style="opacity: 0" src="./images/Circle.png" alt="" />
+    </div> -->
+
+    <div class="imageShow" id="sliderImages">
+        <img class="tomb heart_element" src="./images/RIP.png" alt="" style="display:none"/>
+        <img class="ants heart_element" src="./images/Ants.png" alt="" style="display:none"/>
+        <img class="heart heart_element" src="./images/HeartOnly.png" alt="" />
+        <img class="weight heart_element" src="./images/weights.png" alt="" style="display:none"/>
+        <img class="whale heart_element" src="./images/Whales.png" alt="" style="display:none"/>
+    </div> <br />
+    <!-- Current BPM results  -->
+    <div class="BPM_Stats">
+      <p class="small_gap">Current BPM</p>
+      <span id="BPM_Val"></span>
+    </div>
+
     <div class="Slider_Container">
       <input
         type="range"
@@ -81,6 +104,7 @@
         id="BPM_Range"
       />
     </div>
+
     <div class="number_input">
       <label for="BPM_Custom">Input Custom BPM:</label>
       <input
@@ -101,6 +125,8 @@
           application seeks to provide information about hearts of animals other than just humans.
       </p>
     </div>
+
+    <!-- Scripts -->
     <script type="text/javascript" src="/js/home.js"></script>
     <script type="text/javascript" src="/js/burgerStyle.js"></script>
   </body>
