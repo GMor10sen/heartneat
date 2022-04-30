@@ -196,6 +196,28 @@
     transform:translateY(-15px);
   }
 }
+
+.ZZZ{
+  width: 150px;
+  height: 160px;
+  margin: 40px auto 0px auto;
+  transition: transform 1s linear;
+  animation-name: Shake;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; 
+}
+@keyframes Shake {
+  0% {
+    transform: translateX(-15px);
+  }
+  50% {
+    transform:translateX(15px);
+  }
+  100% {
+    transform:translateX(-15px);
+  }
+}
+
 /* BPM Result Text */
 .BPM_Stats{
   text-align: center;
