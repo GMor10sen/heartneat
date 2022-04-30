@@ -1,4 +1,6 @@
-
+h2{
+  font-weight: 600;
+}
 .quiz_source{
     margin: 0 auto;
     text-align: center;
@@ -41,11 +43,12 @@
   .container {
     display: block;
     position: relative;
-    padding-left: 1px;
+    width: 200px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-weight: 700;
-    font-size: x-large;
+    font-weight: 500;
+    font-size: large;
+    margin: auto;
 
   }
   
@@ -57,21 +60,24 @@
   
   .checkmark {
     position: absolute;
-    top: 0;
-    outline: 1px solid purple;
-    left: 450px;
+    top: 5px;
+    left: -15px;
     height: 15px;
     width: 15px;
-    background-color: #eee;
+    background-color: #FF233D;
     border-radius: 50%;
   }
   
   .container:hover input ~ .checkmark {
-    background-color: #444;
+    background-color: #FFDE5D;
   }
   
+  
   .container input:checked ~ .checkmark {
-    background-color: purple;
+    background-color: #3CC827;
+  }
+  .container:hover input:checked ~ .checkmark {
+  background-color: #FFDE5D;
   }
   
   .checkmark:after {
