@@ -29,28 +29,6 @@
     border: 8px double  rgb(223, 88, 111);
   }
 
-  .sub_button {
-    width: 40%;
-    height: 120px;
-    border: none;
-    margin-bottom: 5rem;
-    margin-top: 2rem;
-    cursor: pointer;
-    font-size: xx-large;
-    font-weight: 600;
-    font-style: italic;
-    border-radius: 20px;
-    background-color: purple;
-    color: white;
-    transition: transform 1s linear, background 0.5s;
-  }
-
-  .sub_button:hover {
-    background-color: #0645a7;
-    color: white;
-    transform: scale(1.1);
-  }
-
   .quiz_conclusion{
       margin: auto;
       align-items: center;
