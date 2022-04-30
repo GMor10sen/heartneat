@@ -1,4 +1,6 @@
-
+h2{
+  font-weight: 600;
+}
 .quiz_source{
     margin: 0 auto;
     text-align: center;
@@ -29,28 +31,6 @@
     border: 8px double  rgb(223, 88, 111);
   }
 
-  .sub_button {
-    width: 40%;
-    height: 120px;
-    border: none;
-    margin-bottom: 5rem;
-    margin-top: 2rem;
-    cursor: pointer;
-    font-size: xx-large;
-    font-weight: 600;
-    font-style: italic;
-    border-radius: 20px;
-    background-color: purple;
-    color: white;
-    transition: transform 1s linear, background 0.5s;
-  }
-
-  .sub_button:hover {
-    background-color: #0645a7;
-    color: white;
-    transform: scale(1.1);
-  }
-
   .quiz_conclusion{
       margin: auto;
       align-items: center;
@@ -59,50 +39,4 @@
   }
 
 
-  /* The following  if for beautification of the radio buttons*/
-  .container {
-    display: block;
-    position: relative;
-    padding-left: 1px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: x-large;
-
-  }
-  
-  .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  .checkmark {
-    position: absolute;
-    top: 0;
-    outline: 1px solid purple;
-    left: 450px;
-    height: 15px;
-    width: 15px;
-    background-color: #eee;
-    border-radius: 50%;
-  }
-  
-  .container:hover input ~ .checkmark {
-    background-color: #444;
-  }
-  
-  .container input:checked ~ .checkmark {
-    background-color: purple;
-  }
-  
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
   

@@ -32,7 +32,7 @@
     margin: 10px 0px 1px 0;
   }
   
-
+  /* The following  if for beautification of the Switch buttons*/
   .switch {
     position: relative;
     display: inline-block;
@@ -75,5 +75,60 @@
     transform: translateX(60px);
   }
   
+  /* The following  if for beautification of the radio buttons*/
+  .container {
+    display: block;
+    position: relative;
+    width: 200px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: large;
+    margin: auto;
+
+  }
   
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    height: 20px;
+    width: 20px;
+    background-color: #FF233D;
+    border-radius: 50%;
+    border: 0.5px solid white;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: #FFDE5D;
+  }
+  
+  
+  .container input:checked ~ .checkmark {
+    background-color: #3CC827;
+  }
+  .container:hover input:checked ~ .checkmark {
+  background-color: #FFDE5D;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .spacer_square{
+    margin: 30px auto 30px auto;
+  }
+
   
