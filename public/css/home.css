@@ -22,8 +22,8 @@
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 125px;
-  height: 120px;
+  width: 39px;
+  height: 35px;
   border: 0;
   background: url("SmallHeart.png");
   cursor: pointer;
@@ -34,30 +34,36 @@
   cursor: pointer;
 }
 
-/* Box Containing Heart */
-.Heart_Functionality_Container{
+/* Circle Behind Animations */
+.imageShow{
+  text-align: center;
   margin: auto;
-  width: 30%;
-  position: relative;
+}
+
+.imageShow {
+  width: 250px;
+  height: 250px;
+  border: none;
+  background: #F2DEFF;
+  border-radius: 100%;
+  margin: auto;
+  padding: 15px 10px;
 }
 
 
 /* Elements Within Heart */
 .heart_element{
-  position: absolute;
-  top: 45%;
-  left: 31%;
+  margin: auto;
+  width: 230px;
+  height: 230px;
 }
-/* Heart And Circle */
+
+/* Heart and heart Animation */
 .heart {
   transition: transform 1s linear;
   animation-name: beating;
   animation-duration: 3s;
   animation-iteration-count: infinite; 
-}
-.circle{
-  position: absolute;
-  z-index: 1;
 }
 
 /* Heart Animation */
@@ -77,9 +83,9 @@
 }
 /* Tombstone Animation */
 .tomb {
-  position: absolute;
-  top: 53%;
-  left: 36.5%;
+  width: 230px;
+  height: 230px;
+  margin: auto;
   transition: transform 1s linear;
   animation-name: stone;
   animation-duration: 10s;
@@ -98,9 +104,9 @@
 }
 /* Whale Animation */
 .whale {
-  position: absolute;
-  top: 62%;
-  left: 39.7%;
+  margin: 40px auto 0px auto;
+  width: 230px;
+  height: 150px;
   transition: transform 1s linear;
   animation-name: swimming;
   animation-duration: 5s;
@@ -119,9 +125,9 @@
 }
 /* Weights  Animation */
 .weight {
-  position: absolute;
-  top: 64%;
-  left: 34.4%;
+  margin: 40px auto 0px auto;
+  width: 150px;
+  height: 120px;
   transition: transform 1s linear;
   animation-name: lift;
   animation-duration: 3s;
@@ -147,9 +153,9 @@
 
 /* Ants  Animation */
 .ants {
-  position: absolute;
-  top: 64%;
-  left: 36.5%;
+  width: 230px;
+  height: 230px;
+  margin: auto;
   transition: transform 1s linear;
   animation-name: bug;
   animation-duration: 3s;
@@ -226,18 +232,4 @@
 .center{
   margin-left: auto;
   margin-right: auto;
-}
-
-.imageShow{
-  text-align: center;
-  margin: auto;
-}
-
-.imageShow {
-  width: 500px;
-  height: 500px;
-  border: 3px outset rgb(214, 233, 85);
-  background: rgb(255, 255, 255);
-  margin: auto;
-  padding: 15px 10px;
 }
