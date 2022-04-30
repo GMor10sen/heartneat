@@ -20,14 +20,26 @@
     <div class="Menu">
       <h2 style="font-size: 35px">MENU</h2>
       <div id="myLinks">
-        <p class="Menu_Option">How Much Information Would You Like?</p>
-        <input type="radio" id="Little" name="info_amount" value="30" />
-        <label for="Little">A Little Bit</label><br />
-        <input type="radio" id="Medium" name="info_amount" value="60" />
-        <label for="Medium">A Medium Amount</label><br />
-        <input type="radio" id="Lot" name="info_amount" value="100" />
-        <label for="Lot">A Lot of Information</label><br /><br />
-
+        <h3 class="Menu_Option">How Much Information Would You Like?</h3>
+        
+        <div class="spacer_square">
+          
+          <label class="container">Little
+            <input type="radio" id="Little" name="info_amount" value="30" />
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Medium
+            <input type="radio" id="Medium" name="info_amount" value="60" checked="checked" />
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Lots
+            <input type="radio" id="Lot" name="info_amount" value="100" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      
         <label class="switch">
           <label for="checkbox"></label>
           <input type="checkbox" />
@@ -44,11 +56,12 @@
         <p>Replace Vibration with Sound</p>
         <label class="switch">
           <label for="checkbox"></label>
-          <input type="checkbox" />
+          <input type="checkbox"  checked="checked" />
           <span class="slider_switch"></span>
         </label>
         <p>Include Animal Information</p>
       </div>
+      
       <!-- Hamburger Menu -->
       <ul class="w3-ul">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
