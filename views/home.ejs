@@ -20,14 +20,26 @@
     <div class="Menu">
       <h2 style="font-size: 35px">MENU</h2>
       <div id="myLinks">
-        <p class="Menu_Option">How Much Information Would You Like?</p>
-        <input type="radio" id="Little" name="info_amount" value="30" />
-        <label for="Little">A Little Bit</label><br />
-        <input type="radio" id="Medium" name="info_amount" value="60" />
-        <label for="Medium">A Medium Amount</label><br />
-        <input type="radio" id="Lot" name="info_amount" value="100" />
-        <label for="Lot">A Lot of Information</label><br /><br />
-
+        <h3 class="Menu_Option">How Much Information Would You Like?</h3>
+        
+        <div class="spacer_square">
+          
+          <label class="container">Little
+            <input type="radio" id="Little" name="info_amount" value="30" />
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Medium
+            <input type="radio" id="Medium" name="info_amount" value="60" checked="checked" />
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Lots
+            <input type="radio" id="Lot" name="info_amount" value="100" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      
         <label class="switch">
           <label for="checkbox"></label>
           <input type="checkbox" />
@@ -44,11 +56,12 @@
         <p>Replace Vibration with Sound</p>
         <label class="switch">
           <label for="checkbox"></label>
-          <input type="checkbox" />
+          <input type="checkbox"  checked="checked" />
           <span class="slider_switch"></span>
         </label>
         <p>Include Animal Information</p>
       </div>
+      
       <!-- Hamburger Menu -->
       <ul class="w3-ul">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -258,20 +271,19 @@
         BPM.
       </p>
       <p class="heart_info">
-        2. A 'resting' heart rate means a 'normal' rate or the rate when someone
-        is not exerting themselves.
+        2. If your heart rate is not beating at a typical pace please contact your doctor, you may have <b>arrhythmia</b>.  
       </p>
 
       <!-- Button -->
       <a
-        href="https://my.clevelandclinic.org/health/diagnostics/17402-pulse--heart-rate"
+        href="https://www.cdc.gov/heartdisease/atrial_fibrillation.htm"
       >
         <button class="heart_button" type="button">Learn More</button>
       </a>
     </div>
     <p class="citing_text">Image by Leah Dubuc</p>
 
-    <!-- Information Normal -->
+    <!-- Information Max -->
 
     <div class="info_background">
       <h2 class="Information Header">Maximum Human Heart Rate</h2>
@@ -288,12 +300,10 @@
       </p>
 
       <p class="heart_info">
-        1. Typically the resting rate of the human heart ranges from 60 to 100
-        BPM.
+        1. This is the the potential heart rate of someone who is exerting themselves, perhaps a workout? 
       </p>
       <p class="heart_info">
-        2. A 'resting' heart rate means a 'normal' rate or the rate when someone
-        is not exerting themselves.
+        2. To find your maximum heart rate subtract your age from 220.  
       </p>
 
       <!-- Button -->

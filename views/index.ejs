@@ -19,26 +19,38 @@
     <div class="Menu">
       <h2 style="font-size: 35px">MENU</h2>
       <div id="myLinks">
-        <p class="Menu_Option">
+        <h3 class="Menu_Option">
           Use these buttons to alter the map below to another page!
-        </p>
-        <input
-          type="radio"
-          id="Cardiologist"
-          name="Map_Selecction"
-          value="30"
-        />
-        <label for="Cardiologist">Find local cardiologist</label><br />
-        <input type="radio" id="Gym" name="Map_Selecction" value="60" />
-        <label for="Gym">Find local gyms</label><br />
-        <input
-          type="radio"
-          id="Nutritionist"
-          name="Map_Selecction"
-          value="100"
-        />
-        <label for="Nutritionist">Find local nutritionists</label><br /><br />
-        <img src="" alt="" />
+        </h3>
+
+        <label class="container"
+          >Cardiologist
+          <input
+            type="radio"
+            id="Cardiologist"
+            name="Map_Selecction"
+            value="30"
+            checked="checked"
+          />
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container"
+          >Gyms
+          <input type="radio" id="Gym" name="Map_Selecction" value="60" />
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container"
+          >Nutritionists
+          <input
+            type="radio"
+            id="Nutritionist"
+            name="Map_Selecction"
+            value="100"
+          />
+          <span class="checkmark"></span>
+        </label>
       </div>
       <!-- Hamburger Menu -->
       <ul class="w3-ul">
