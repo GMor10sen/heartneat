@@ -153,9 +153,9 @@
 
 /* Ants  Animation */
 .ants {
-  width: 230px;
-  height: 230px;
-  margin: auto;
+  width: 150px;
+  height: 120px;
+  margin: 40px auto 0px auto;
   transition: transform 1s linear;
   animation-name: bug;
   animation-duration: 3s;
@@ -179,6 +179,7 @@
 .shrew{
   width: 200px;
   height: 130px;
+  margin: 40px auto 0px auto;
   transition: transform 1s linear;
   animation-name: hop;
   animation-duration: 3s;
