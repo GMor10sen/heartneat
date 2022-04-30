@@ -176,7 +176,25 @@
   }
 }
 
-
+.shrew{
+  width: 200px;
+  height: 130px;
+  transition: transform 1s linear;
+  animation-name: hop;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; 
+}
+@keyframes hop {
+  0% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform:translateY(15px);
+  }
+  100% {
+    transform:translateY(-15px);
+  }
+}
 /* BPM Result Text */
 .BPM_Stats{
   text-align: center;
