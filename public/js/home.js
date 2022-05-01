@@ -2,7 +2,10 @@ var slider = document.getElementById("BPM_Range");
 var slider_output = document.getElementById("BPM_Val");
 var custom_bpm = document.getElementById("BPM_Custom"); 
 var checkBox = document.getElementById("vibration_switch");
+var heartbeat_audio = new Audio('/sound/heartbeat-04.mp3');
+heartbeat_audio.playbackRate=2;
 let vibrateIntervalId = 0;
+let soundIntervalId = 0;
 
 slider_output.innerHTML = slider.value;
 
@@ -11,13 +14,14 @@ window.addEventListener('load', function() {
 	var rangeslider = document.getElementById("BPM_Range");
 
 	if (!("vibrate" in navigator) || !isMobile()) {
-		document.getElementById('vibration_switch').checked = false;
+		document.getElementById('vibration_switch').checked = true;
+		//heartbeat_audio.play();
 	}
 	else {
-		startVibrate();
+		startVibrate(false);
 	}
 	var images = document.getElementById("sliderImages");
-  
+
 	rangeslider.addEventListener('input', function() {
 	  for (var i = 0; i < images.children.length; i++) {
 		images.children[i].style.display = 'none';
@@ -54,7 +58,10 @@ slider.oninput = function() {
 	slider_output.innerHTML = this.value;
 	var canVibrate = !document.getElementById('vibration_switch').checked;
 	if (canVibrate) { 
-		changeVibrate(this.value);
+		changeVibrate(this.value, false);
+	}
+	else {
+		changeVibrate(this.value, true);
 	}
 	
 }
@@ -77,23 +84,43 @@ if (custom_bpm) {
 }
 
 
-const startVibrate = () => {
+const startVibrate = (isSound) => {
 	clearInterval(vibrateIntervalId);
-	var val = Math.floor(1000 / (slider.value / 60));
+	clearInterval(soundIntervalId);
+	var value = Math.floor(1000 / (slider.value / 60));
 	console.log("Vibrating at: " + slider.value + " BPM");
-	vibrateIntervalId = setInterval(() => navigator.vibrate(50), val);
+	if (isSound){
+		navigator.vibrate(0);
+		heartbeat_audio.playbackRate = Math.floor(slider.value / 60) > 16 ? 16 : Math.floor(slider.value / 60);
+		soundIntervalId = setInterval(() => heartbeat_audio.play(), value);
+	}
+	else {
+		vibrateIntervalId = setInterval(() => navigator.vibrate(50), value);
+	}
 };
 const stopVibrate = () => {
     clearInterval(vibrateIntervalId);
+	clearInterval(soundIntervalId);
+	var value = Math.floor(1000 / (slider.value / 60));
 	console.log("Stopping Vibrating");
     navigator.vibrate(0);
+	soundIntervalId = setInterval(() => heartbeat_audio.play(), value);
 };
 
-const changeVibrate = (val) => {
+const changeVibrate = (val, isSound) => {
 	clearInterval(vibrateIntervalId);
+	clearInterval(soundIntervalId);
 	var value = Math.floor(1000 / (val / 60));
 	console.log("Changing vibration to: " + val + " BPM");
-	vibrateIntervalId = setInterval(() => navigator.vibrate(50), value);
+	if (isSound){
+		navigator.vibrate(0);
+		heartbeat_audio.playbackRate = Math.floor(val / 60) > 16 ? 16 : Math.floor(val / 60);
+		soundIntervalId = setInterval(() => heartbeat_audio.play(), value);
+	}
+	else {
+		vibrateIntervalId = setInterval(() => navigator.vibrate(50), value);
+	}
+
 };
 document.getElementById('vibration_switch').addEventListener('change', (event) => {
 	//event
@@ -101,19 +128,20 @@ document.getElementById('vibration_switch').addEventListener('change', (event) =
 
 	//Cancel event if vibration is not supported
 	if (!("vibrate" in navigator) || !isMobile()) {
-		if (doNotVibrate === true) {
+		if (doNotVibrate === false) {
 			//Only alert if they are trying to turn "on" vibrate
 			alert("Vibrate not supported!");
-			event.currentTarget.checked = false;
+			event.currentTarget.checked = true;
+			startVibrate(true);
 		}
 		return;
 	}
 
 	if (doNotVibrate === false) {
-		startVibrate();
+		startVibrate(false);
 	}
 	else {
-		stopVibrate();
+		startVibrate(true);
 	}
 	console.log("Change event: " + event.currentTarget.checked);
 });
