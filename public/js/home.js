@@ -1,3 +1,5 @@
+// const { set } = require("express/lib/application");
+
 var slider = document.getElementById("BPM_Range");
 var slider_output = document.getElementById("BPM_Val");
 var custom_bpm = document.getElementById("BPM_Custom"); 
@@ -154,9 +156,192 @@ const isMobile = () => {
 };
 
 function yesnoCheck() {
+
     if (document.getElementById('Little').checked) {
-        document.getElementById('littleInfo1').style.visibility = 'visible';
-		document.getElementById('littleInfo2').style.visibility = 'visible';
-		document.getElementById('littleInfo3').style.visibility = 'visible';
-    }
+
+        document.getElementById('littleInfo1').style.display = 'block';
+		document.getElementById('littleInfo2').style.display = 'none';
+		document.getElementById('littleInfo3').style.display = 'block';
+		document.getElementById('littleInfo4').style.display = 'none';
+		document.getElementById('littleInfo01').style.display = 'none';
+
+		document.getElementById('littleInfo5').style.display = 'block';
+		document.getElementById('littleInfo6').style.display = 'none';
+		document.getElementById('littleInfo7').style.display = 'block';
+		document.getElementById('littleInfo8').style.display = 'none';
+		document.getElementById('littleInfo02').style.display = 'none';
+
+		document.getElementById('littleInfo9').style.display = 'block';
+		document.getElementById('littleInfo10').style.display = 'none';
+		document.getElementById('littleInfo11').style.display = 'block';
+		document.getElementById('littleInfo12').style.display = 'none';
+		document.getElementById('littleInfo03').style.display = 'none';
+
+		document.getElementById('littleInfo13').style.display = 'block';
+		document.getElementById('littleInfo14').style.display = 'none';
+		document.getElementById('littleInfo15').style.display = 'block';
+		document.getElementById('littleInfo16').style.display = 'none';
+		document.getElementById('littleInfo04').style.display = 'none';
+		document.getElementById('littleInfo05').style.display = 'none';
+
+		document.getElementById('littleInfo17').style.display = 'block';
+		document.getElementById('littleInfo18').style.display = 'none';
+		document.getElementById('littleInfo19').style.display = 'block';
+		document.getElementById('littleInfo20').style.display = 'none';
+		document.getElementById('littleInfo06').style.display = 'none';
+		document.getElementById('littleInfo07').style.display = 'none';
+
+		document.getElementById('littleInfo21').style.display = 'block';
+		document.getElementById('littleInfo22').style.display = 'none';
+		document.getElementById('littleInfo23').style.display = 'block';
+		document.getElementById('littleInfo24').style.display = 'none';
+		document.getElementById('littleInfo08').style.display = 'none';
+		document.getElementById('littleInfo09').style.display = 'none';
+
+		document.getElementById('littleInfo25').style.display = 'block';
+		document.getElementById('littleInfo26').style.display = 'none';
+		document.getElementById('littleInfo27').style.display = 'block';
+		document.getElementById('littleInfo28').style.display = 'none';
+		document.getElementById('littleInfo010').style.display = 'none';
+
+    } else if(document.getElementById('Medium').checked){
+        
+		document.getElementById('littleInfo1').style.display = 'block';
+		document.getElementById('littleInfo2').style.display = 'none';
+		document.getElementById('littleInfo3').style.display = 'block';
+		document.getElementById('littleInfo4').style.display = 'block';
+		document.getElementById('littleInfo01').style.display = 'none';
+
+		document.getElementById('littleInfo5').style.display = 'block';
+		document.getElementById('littleInfo6').style.display = 'none';
+		document.getElementById('littleInfo7').style.display = 'block';
+		document.getElementById('littleInfo8').style.display = 'block';
+		document.getElementById('littleInfo02').style.display = 'none';
+
+		document.getElementById('littleInfo9').style.display = 'block';
+		document.getElementById('littleInfo10').style.display = 'none';
+		document.getElementById('littleInfo11').style.display = 'block';
+		document.getElementById('littleInfo12').style.display = 'block';
+		document.getElementById('littleInfo03').style.display = 'none';
+
+		document.getElementById('littleInfo13').style.display = 'block';
+		document.getElementById('littleInfo14').style.display = 'none';
+		document.getElementById('littleInfo15').style.display = 'block';
+		document.getElementById('littleInfo16').style.display = 'block';
+		document.getElementById('littleInfo04').style.display = 'none';
+		document.getElementById('littleInfo05').style.display = 'none';
+
+		document.getElementById('littleInfo17').style.display = 'block';
+		document.getElementById('littleInfo18').style.display = 'none';
+		document.getElementById('littleInfo19').style.display = 'block';
+		document.getElementById('littleInfo20').style.display = 'block';
+		document.getElementById('littleInfo06').style.display = 'none';
+		document.getElementById('littleInfo07').style.display = 'none';
+
+		document.getElementById('littleInfo21').style.display = 'block';
+		document.getElementById('littleInfo22').style.display = 'none';
+		document.getElementById('littleInfo23').style.display = 'block';
+		document.getElementById('littleInfo24').style.display = 'block';
+		document.getElementById('littleInfo08').style.display = 'none';
+		document.getElementById('littleInfo09').style.display = 'none';
+
+		document.getElementById('littleInfo25').style.display = 'block';
+		document.getElementById('littleInfo26').style.display = 'none';
+		document.getElementById('littleInfo27').style.display = 'block';
+		document.getElementById('littleInfo28').style.display = 'block';
+		document.getElementById('littleInfo010').style.display = 'none';
+
+	} else if(document.getElementById('Lot').checked) {
+        
+		document.getElementById('littleInfo1').style.display = 'block';
+		document.getElementById('littleInfo2').style.display = 'block';
+		document.getElementById('littleInfo3').style.display = 'block';
+		document.getElementById('littleInfo4').style.display = 'block';
+		document.getElementById('littleInfo01').style.display = 'block';
+
+		document.getElementById('littleInfo5').style.display = 'block';
+		document.getElementById('littleInfo6').style.display = 'block';
+		document.getElementById('littleInfo7').style.display = 'block';
+		document.getElementById('littleInfo8').style.display = 'block';
+		document.getElementById('littleInfo02').style.display = 'block';
+
+		document.getElementById('littleInfo9').style.display = 'block';
+		document.getElementById('littleInfo10').style.display = 'block';
+		document.getElementById('littleInfo11').style.display = 'block';
+		document.getElementById('littleInfo12').style.display = 'block';
+		document.getElementById('littleInfo03').style.display = 'block';
+
+		document.getElementById('littleInfo13').style.display = 'block';
+		document.getElementById('littleInfo14').style.display = 'block';
+		document.getElementById('littleInfo15').style.display = 'block';
+		document.getElementById('littleInfo16').style.display = 'block';
+		document.getElementById('littleInfo04').style.display = 'block';
+		document.getElementById('littleInfo05').style.display = 'block';
+
+		document.getElementById('littleInfo17').style.display = 'block';
+		document.getElementById('littleInfo18').style.display = 'block';
+		document.getElementById('littleInfo19').style.display = 'block';
+		document.getElementById('littleInfo20').style.display = 'block';
+		document.getElementById('littleInfo06').style.display = 'block';
+		document.getElementById('littleInfo07').style.display = 'block';
+
+		document.getElementById('littleInfo21').style.display = 'block';
+		document.getElementById('littleInfo22').style.display = 'block';
+		document.getElementById('littleInfo23').style.display = 'block';
+		document.getElementById('littleInfo24').style.display = 'block';
+		document.getElementById('littleInfo08').style.display = 'block';
+		document.getElementById('littleInfo09').style.display = 'block';
+
+		document.getElementById('littleInfo25').style.display = 'block';
+		document.getElementById('littleInfo26').style.display = 'block';
+		document.getElementById('littleInfo27').style.display = 'block';
+		document.getElementById('littleInfo28').style.display = 'block';
+		document.getElementById('littleInfo010').style.display = 'block';
+
+	} else {
+		document.getElementById('littleInfo1').style.display = 'none';
+		document.getElementById('littleInfo2').style.display = 'none';
+		document.getElementById('littleInfo3').style.display = 'none';
+		document.getElementById('littleInfo4').style.display = 'none';
+		document.getElementById('littleInfo01').style.display = 'none';
+
+		document.getElementById('littleInfo5').style.display = 'none';
+		document.getElementById('littleInfo6').style.display = 'none';
+		document.getElementById('littleInfo7').style.display = 'none';
+		document.getElementById('littleInfo8').style.display = 'none';
+		document.getElementById('littleInfo02').style.display = 'none';
+
+		document.getElementById('littleInfo9').style.display = 'none';
+		document.getElementById('littleInfo10').style.display = 'none';
+		document.getElementById('littleInfo11').style.display = 'none';
+		document.getElementById('littleInfo12').style.display = 'none';
+		document.getElementById('littleInfo03').style.display = 'none';
+
+		document.getElementById('littleInfo13').style.display = 'none';
+		document.getElementById('littleInfo14').style.display = 'none';
+		document.getElementById('littleInfo15').style.display = 'none';
+		document.getElementById('littleInfo16').style.display = 'none';
+		document.getElementById('littleInfo04').style.display = 'none';
+		document.getElementById('littleInfo05').style.display = 'none';
+
+		document.getElementById('littleInfo17').style.display = 'none';
+		document.getElementById('littleInfo18').style.display = 'none';
+		document.getElementById('littleInfo19').style.display = 'none';
+		document.getElementById('littleInfo20').style.display = 'none';
+		document.getElementById('littleInfo06').style.display = 'none';
+		document.getElementById('littleInfo07').style.display = 'none';
+
+		document.getElementById('littleInfo21').style.display = 'none';
+		document.getElementById('littleInfo22').style.display = 'none';
+		document.getElementById('littleInfo23').style.display = 'none';
+		document.getElementById('littleInfo24').style.display = 'none';
+		document.getElementById('littleInfo08').style.display = 'none';
+		document.getElementById('littleInfo09').style.display = 'none';
+
+		document.getElementById('littleInfo25').style.display = 'none';
+		document.getElementById('littleInfo26').style.display = 'none';
+		document.getElementById('littleInfo27').style.display = 'none';
+		document.getElementById('littleInfo28').style.display = 'none';
+		document.getElementById('littleInfo010').style.display = 'none';
+	}
 };
