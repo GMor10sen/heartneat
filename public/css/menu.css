@@ -1,3 +1,4 @@
+  /* Menu coloring and text style */
   .Menu {
     background-color: rgb(172, 3, 172);
     color: white;
@@ -6,6 +7,7 @@
     text-align: center;
   }
   
+  /* Menu icon for hamburger menu */
   .Menu a.icon {
     display: block;
     position: absolute;
@@ -13,21 +15,24 @@
     right: 0px;
   }
   
+  /* Menu color change for icon when mouse hovers over */
   .Menu a:hover {
     background-color: rgb(229, 135, 21);
     color: black;
   }
   
+  /* Color assignment for active elements  */
   .active {
     background-color: #04AA6D;
     color: white;
   }
   
+  /* Hidden display for JavaScript functionality  */
   .Menu #myLinks {
     display: none;
   }
   
-
+  /* Spacing and orientation of menu options  */
   .Menu_Option{
     margin: 10px 0px 1px 0;
   }
@@ -40,7 +45,7 @@
     height: 40px;
   }
   
-  
+  /* Slider color before activation  */
   .slider_switch {
     position: absolute;
     cursor: pointer;
@@ -53,6 +58,7 @@
     transition: 0.5s;
   }
   
+  /* Slider position before activation  */
   .slider_switch:before {
     position: absolute;
     content: "";
@@ -66,11 +72,12 @@
     transition: .4s;
   }
   
+  /* Slider color after activation  */
   input:checked + .slider_switch {
     background-color:  rgb(60, 200, 39); 
   }
   
-  
+   /* Slider position after activation  */
   input:checked + .slider_switch:before {
     transform: translateX(60px);
   }
@@ -88,12 +95,14 @@
 
   }
   
+  /* radio button position */
   .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
   }
   
+  /* radio button color and position before  */
   .checkmark {
     position: absolute;
     top: 5px;
@@ -105,28 +114,34 @@
     border: 0.5px solid white;
   }
   
+   /* radio button color when hovered and not checked */
   .container:hover input ~ .checkmark {
     background-color: #FFDE5D;
   }
   
-  
+  /* radio button color when checked */
   .container input:checked ~ .checkmark {
     background-color: #3CC827;
   }
+
+  /* radio button color when hovered and checked */
   .container:hover input:checked ~ .checkmark {
   background-color: #FFDE5D;
   }
   
+  /*position of radio buttons after check, actual radio buttons are hidden */
   .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
   
+  /*position of radio buttons when not checked remain in blocked position */
   .container input:checked ~ .checkmark:after {
     display: block;
   }
   
+   /*provides space around elements*/
   .spacer_square{
     margin: 30px auto 30px auto;
   }
