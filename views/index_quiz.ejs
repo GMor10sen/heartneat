@@ -15,10 +15,12 @@
     <link rel="stylesheet" href="/css/quiz.css" />
   </head>
   <body>
+  <!-- Menu Begin   -->
     <div class="Menu">
       <h2 style="font-size: 35px">MENU</h2>
       <div id="myLinks">
         <p class="Menu_Option">Use these buttons to naviate to another page!</p>
+        <!-- Buttons in Menu -->
         <div class="Button_Options">
           <a href="/home/index">
             <img class="Picture_Frame_Small" src="/images/Plus.png" alt="" />
@@ -41,6 +43,7 @@
       </ul>
     </div>
 
+    <!-- Header image for quiz and citation-->
     <img class="Picture_Frame_Small" src="/images/picquiz.jpg" alt="" />
 
     <p class="quiz_source">
@@ -56,12 +59,12 @@
       >
     </p>
 
+    <!-- Box surrounding Questions -->
     <div class="Question_Box">
-
-    
       <form id="quiz_form" onsubmit="getScore()">
+
+        <!-- Question 1 -->
         <h2>What is the resting heart rate of a person?</h2>
-       
 
         <label class="container">60 to 100 BPM 
           <input type="radio" id="Norm" name="normal_rate" value="Answer" />
@@ -72,19 +75,14 @@
           <input type="radio" id="High" name="normal_rate" value="Wrong"   checked="checked"/>
           <span class="checkmark"></span>
         </label>
-        
-
+      
         <label class="container">20 to 50 BPM
           <input type="radio" id="Low" name="normal_rate" value="Wrong"  />
           <span class="checkmark"></span>
         </label>
        
-   
-      
-
+        <!-- Question 2 -->
         <h2>What is the typical heartrate when a person sleeps?</h2>
-
-
 
         <label class="container">60 to 100 BPM
           <input type="radio" id="High" name="sleep_rate" value="Wrong"  checked="checked" />
@@ -95,17 +93,14 @@
           <input type="radio" id="Extreme" name="sleep_rate" value="Wrong" />
           <span class="checkmark"></span>
         </label>
-        
 
         <label class="container">40 to 50 BPM
           <input type="radio" id="Norm" name="sleep_rate" value="Answer"  />
           <span class="checkmark"></span>
         </label>
        
-
+        <!-- Question 3 -->
         <h2>Which animal has the slowest heart rate?</h2>
-
-
 
         <label class="container">Shrimp
           <input type="radio" id="Shrimp" name="slowest_rate" value="Wrong" />
@@ -116,13 +111,13 @@
           <input type="radio" id="Whale" name="slowest_rate" value="Answer" />
           <span class="checkmark"></span>
         </label>
-        
-
+      
         <label class="container">Elephant
           <input type="radio" id="Elephant" name="slowest_rate" value="Wrong"  checked="checked"/>
           <span class="checkmark"></span>
         </label>
 
+        <!-- Question 4 -->
         <h2>How do you find your approximate maximum heart rate?</h2>
 
         <label class="container">220 - age
@@ -135,18 +130,12 @@
           <span class="checkmark"></span>
         </label>
         
-
         <label class="container">25 + age
           <input type="radio" id="Adding" name="max_rate" value="Wrong" />
           <span class="checkmark"></span>
         </label>
 
-
-
-       
-       
-
-
+        <!-- Question 5 -->     
         <h2>Which animal has the fastest heart rate?</h2>
 
         <label class="container">Moose
@@ -158,17 +147,14 @@
           <input type="radio" id="Worm" name="fastest_rate" value="Wrong"  />
           <span class="checkmark"></span>
         </label>
-        
 
         <label class="container">Pigmy Shrew
           <input type="radio" id="Shrew" name="fastest_rate" value="Answer" />
           <span class="checkmark"></span>
         </label>
 
-
-
+      <!-- Question 6 -->  
         <h2>What is arrhythmia?</h2>
-
         
         <label class="container">Heart starts dancing
           <input type="radio" id="dance" name="disease" value="Wrong" />
@@ -186,7 +172,7 @@
           <span class="checkmark"></span>
         </label>
 
-
+      <!-- Question 7 -->  
         <h2>Select <b>every</b> item from the list that is a heart disease:</h2>
 
         <label class="container">Mononucleosis
@@ -209,6 +195,7 @@
           <span class="checkmark"></span>
         </label>
     
+      <!-- Question 8, Last Question-->  
         <h2>
           Should you seek help if your heart rate <br>  is consistently outside the average range?
         </h2>
@@ -225,8 +212,12 @@
         </label>
 
       </div>
+      <!-- End Box -->
 
+    <!-- Ending of quiz  -->
     <div class="quiz_conclusion">
+
+      <!-- Feedback information -->
         <h2>Please provide your feedback on this experience:</h2>
 
         <textarea
@@ -238,10 +229,12 @@
         ></textarea>
         <br />
 
+      <!-- Submit Button -->
         <input class="sub_button" type="submit" value="Submit" />
       </form>
     </div>
 
+    <!-- JavaScripts -->
     <script type="text/javascript" src="/js/burgerStyle.js"></script>
     <script type="text/javascript" src="/js/quiz.js"></script>
   </body>

@@ -282,21 +282,23 @@
   font-size: large;
 }
 
-
+/* media width video with and such */
 .citing_media{
   width: 400px;
 }
 
+/* move media to left side without affecting text */
 .left{
   float: left;
   margin-left: 20px;
 }
 
-
+/* move media to right side without affecting text */
 .right{
   float: right; 
 }
 
+/* round corners on media edges */
 .round{
   border-radius: 50%;
 }
