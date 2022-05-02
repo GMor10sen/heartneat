@@ -245,7 +245,8 @@
  background-color: white;
  border: 20px double #AC03AC;
  width: 80%;
-
+ visibility: hidden;
+ max-height: 0;
  margin: auto;
  font-weight: 600;
  text-align: center;
@@ -283,4 +284,3 @@
 .round{
   border-radius: 50%;
 }
-

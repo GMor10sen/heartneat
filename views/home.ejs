@@ -25,17 +25,17 @@
         <div class="spacer_square">
           
           <label class="container">Little
-            <input type="radio" id="Little" name="info_amount" value="30" />
+            <input type="radio" id="Little" name="info_amount" value="30" onclick="javascript:yesnoCheck();"/>
             <span class="checkmark"></span>
           </label>
           
           <label class="container">Medium
-            <input type="radio" id="Medium" name="info_amount" value="60" checked="checked" />
+            <input type="radio" id="Medium" name="info_amount" value="60" onclick="javascript:yesnoCheck();"/>
             <span class="checkmark"></span>
           </label>
           
           <label class="container">Lots
-            <input type="radio" id="Lot" name="info_amount" value="100" />
+            <input type="radio" id="Lot" name="info_amount" value="100" onclick="javascript:yesnoCheck();"/>
             <span class="checkmark"></span>
           </label>
         </div>
@@ -161,10 +161,11 @@
 
     <!-- Information Shrew -->
     <div class="info_background">
-      <h2 class="Information Header">Pygmy Shrew</h2>
+      <h2 class="Information Header" id="littleInfo1">Pygmy Shrew</h2>
 
       <iframe
         class="citing_media"
+        id="littleInfo2"
         height="300px"
         src="https://www.youtube.com/embed/1wgcZjeEUIM"
         title="YouTube video player"
@@ -173,7 +174,7 @@
         allowfullscreen
       ></iframe>
 
-      <p class="heart_info">
+      <p class="heart_info" id="littleInfo3">
         1. The Pygmy shew has one of the fastest heart rates of the animal
         kingdom with a mindboggling 1200 beats per minute!
       </p>
@@ -189,12 +190,12 @@
       >
         <button class="heart_button" type="button">Learn More</button>
       </a>
+      <p class="citing_text">Video of Sherw by Inside Tech</p>
     </div>
-    <p class="citing_text">Video of Sherw by Inside Tech</p>
 
     <!-- Information Whale -->
 
-    <div class="info_background">
+    <div class="info_background" id="lotsWhale">
       <h2 class="Information Header">Whale</h2>
 
       <iframe
@@ -226,12 +227,12 @@
       >
         <button class="heart_button" type="button">Learn More</button>
       </a>
+      <p class="citing_text">Video of Whale by Stanford</p>
     </div>
-    <p class="citing_text">Video of Whale by Stanford</p>
 
     <!-- Information Ant -->
 
-    <div class="info_background">
+    <div class="info_background" id="lotsAnts">
       <h2 class="Information Header">Ants</h2>
 
       <iframe
@@ -261,12 +262,12 @@
       >
         <button class="heart_button" type="button">Learn More</button>
       </a>
+      <p class="citing_text">Video of Ant by Karel S.</p>
     </div>
-    <p class="citing_text">Video of Ant by Karel S.</p>
 
     <!-- Information Normal -->
 
-    <div class="info_background">
+    <div class="info_background" id="avgHeartRate">
       <h2 class="Information Header">Average Human Heart Rate</h2>
 
       <iframe width="560" height="315" src="https://www.youtube.com/embed/GMBSU-2GK3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -291,12 +292,12 @@
       >
         <button class="heart_button" type="button">Learn More</button>
       </a>
+      <p class="citing_text">Video by National Geographic </p>
     </div>
-    <p class="citing_text">Video by National Geographic </p>
 
     <!-- Information Max -->
 
-    <div class="info_background">
+    <div class="info_background" id="maxHeartRate">
       <h2 class="Information Header">Maximum Human Heart Rate</h2>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/wWGulLAa0O0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -325,15 +326,14 @@
       >
         <button class="heart_button" type="button">Cardiomyopathy</button>
       </a>
-
+      <p class="citing_text">Video by British Heart Foundation</p>
 
     </div>
-    <p class="citing_text">Video by British Heart Foundation</p>
 
 
       <!-- Information Death -->
 
-      <div class="info_background">
+      <div class="info_background" id="lotsDeath">
         <h2 class="Information Header">Death</h2>
   
         <iframe allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/Zqw1k4m930mKrYXGup/video" width="480"></iframe>
@@ -353,13 +353,13 @@
         >
           <button class="heart_button" type="button">Learn More</button>
         </a>
+        <p class="citing_text">Gif by Janelle DeWitt</p>
       </div>
-      <p class="citing_text">Gif by Janelle DeWitt</p>
 
 
        <!-- Information Sleep -->
 
-       <div class="info_background">
+       <div class="info_background" id="lotsSleeping">
         <h2 class="Information Header">Sleeping</h2>
   
         <iframe width="560" height="315" src="https://www.youtube.com/embed/2IBfUUgiP9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -377,10 +377,8 @@
         >
           <button class="heart_button" type="button">Learn More</button>
         </a>
+        <p class="citing_text">Image by American Heart Association</p>
       </div>
-      <p class="citing_text">Image by American Heart Association</p>
-
-
 
     <!-- Scripts -->
     <script type="text/javascript" src="/js/home.js"></script>
