@@ -152,3 +152,11 @@ const isMobile = () => {
         nav.match(/iphone/i) || nav.match(/ipod/i) || nav.match(/ipad/i) || nav.match(/android/i)
     );
 };
+
+function yesnoCheck() {
+    if (document.getElementById('Little').checked) {
+        document.getElementById('littleInfo1').style.visibility = 'visible';
+		document.getElementById('littleInfo2').style.visibility = 'visible';
+		document.getElementById('littleInfo3').style.visibility = 'visible';
+    }
+};
