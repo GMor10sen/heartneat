@@ -17,13 +17,15 @@
     <link rel="stylesheet" href="/css/body_and_citing.css" />
   </head>
   <body>
+    <!-- Start of the Menu -->
     <div class="Menu">
       <h2 style="font-size: 35px">MENU</h2>
       <div id="myLinks">
+
+        <!-- Information Selection  -->
         <h3 class="Menu_Option">How Much Information Would You Like?</h3>
         
-        <div class="spacer_square">
-          
+        <div class="spacer_square">      
           <label class="container">Little
             <input type="radio" id="Little" name="info_amount" value="30" onclick="javascript:yesnoCheck();"/>
             <span class="checkmark"></span>
@@ -39,21 +41,25 @@
             <span class="checkmark"></span>
           </label>
         </div>
+
+        <!-- Switch 1  -->
       
         <label class="switch">
           <label for="checkbox"></label>
           <input type="checkbox" id="amimation_switch"/>
           <span class="slider_switch"></span>
         </label>
-
         <p>Turn Off Animations</p>
+
+        <!-- Switch 2  -->
         <label class="switch">
           <label for="checkbox"></label>
           <input type="checkbox" id="vibration_switch" />
           <span class="slider_switch"></span>
         </label>
-
         <p>Replace Vibration with Sound</p>
+        
+        <!-- Switch 3  -->
         <label class="switch">
           <label for="checkbox"></label>
           <input type="checkbox"  checked="checked" />
@@ -70,6 +76,7 @@
       </ul>
     </div>
 
+    <!-- Button Navigation on Homepage -->
     <div class="Button_Options">
       <a href="/home/index">
         <img class="Picture_Frame_Small" src="./images/Plus.png" alt="" />
@@ -84,23 +91,23 @@
       </a>
     </div>
 
-
-
-
-
+    <!-- Array of images and animations to place within main circle -->
     <div class="imageShow" id="sliderImages">
+      <!-- Tombstone animation and image -->
       <img
         class="tomb heart_element tomb_animation"
         src="./images/RIP.png"
         alt=""
         style="display: none"
       />
+      <!-- Ants animation and image -->
       <img
         class="ants heart_element"
         src="./images/Ants.png"
         alt=""
         style="display: none"
       />
+      <!-- Heart animation and image -->
       <img class="heart heart_element" src="./images/HeartOnly.png" alt="" />
       <img
         class="weight heart_element weight_animation"
@@ -108,25 +115,27 @@
         alt=""
         style="display: none"
       />
+      <!-- Whale animation and image -->
       <img
         class="whale heart_element whale_animation"
         src="./images/Whales.png"
         alt=""
         style="display: none"
       />
+      <!-- Shrew animation and image -->
       <img
       class="shrew heart_element shrew_animation"
       src="./images/Shrew.png"
       alt=""
       style="display: none"
-    />
-    
-    <img
-    class="ZZZ heart_element ZZZ_animation"
-    src="./images/Sleeping.png"
-    alt=""
-    style="display: none"
-  />
+      />
+     <!-- Sleeping animation and image -->
+      <img
+      class="ZZZ heart_element ZZZ_animation"
+      src="./images/Sleeping.png"
+      alt=""
+      style="display: none"
+      />
     </div>
     <br />
 
@@ -136,6 +145,7 @@
       <span id="BPM_Val"></span>
     </div>
 
+    <!-- BPM Slider  -->
     <div class="Slider_Container">
       <input
         type="range"
@@ -147,6 +157,7 @@
       />
     </div>
 
+    <!-- Number Input BPM   -->
     <div class="number_input">
       <label for="BPM_Custom">Input Custom BPM:</label>
       <input
