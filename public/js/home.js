@@ -30,21 +30,28 @@ window.addEventListener('load', function() {
 	  if (rangeslider.value < 2) {
 		//tombstone animation
 		images.children[0].style.display = 'block';
+		handleAnimationChange(images.children[0], 'tomb_animation');
 	  } else if ((rangeslider.value >= 2) && (rangeslider.value <= 35)) {
 		//whale animation
 		images.children[4].style.display = 'block';
+		handleAnimationChange(images.children[4], 'whale_animation');
 	  } else if ((rangeslider.value > 35) && (rangeslider.value <= 55)) {
 		//ant animation
 	  	images.children[1].style.display = 'block';
+		handleAnimationChange(images.children[1], 'ants_animation');
 	  }
 	  else if((rangeslider.value > 55) && (rangeslider.value <= 100)){
 		//resting human heart
 		images.children[2].style.display = 'block';
+		handleAnimationChange(images.children[2], 'heart');
 	  } else if((rangeslider.value > 100) && (rangeslider.value <= 180)){
 		//exercising human
 		images.children[3].style.display = 'block';
+		handleAnimationChange(images.children[3], 'weight_animation');
 	  } else if((rangeslider.value > 750) && (rangeslider.value <= 1200)){
 		  //pigmy shrew will go here
+		  images.children[5].style.display = 'block';
+		handleAnimationChange(images.children[5], 'shrew_animation');
 	  } else {
 		for (var i = 0; i < images.children.length; i++) {
 			images.children[i].style.display = 'none';
@@ -53,6 +60,15 @@ window.addEventListener('load', function() {
 
 	});
 });
+
+function handleAnimationChange(element, changingClass) {
+	if (document.getElementById('amimation_switch').checked) {
+		element.classList.remove(changingClass);
+	}
+	else {
+		element.classList.add(changingClass);
+	}
+}
 
 slider.oninput = function() {
 	slider_output.innerHTML = this.value;
