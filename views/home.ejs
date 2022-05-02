@@ -25,17 +25,17 @@
         <div class="spacer_square">
           
           <label class="container">Little
-            <input type="radio" id="Little" name="info_amount" value="30" onclick="javascript:yesnoCheck();"/>
+            <input type="radio" id="Little" name="info_amount" value="30"/>
             <span class="checkmark"></span>
           </label>
           
           <label class="container">Medium
-            <input type="radio" id="Medium" name="info_amount" value="60" onclick="javascript:yesnoCheck();" checked="true"/>
+            <input type="radio" id="Medium" name="info_amount" value="60" checked="true"/>
             <span class="checkmark"></span>
           </label>
           
           <label class="container">Lots
-            <input type="radio" id="Lot" name="info_amount" value="100" onclick="javascript:yesnoCheck();"/>
+            <input type="radio" id="Lot" name="info_amount" value="100"/>
             <span class="checkmark"></span>
           </label>
         </div>
@@ -160,12 +160,12 @@
     </div>
 
     <!-- Information Shrew -->
-    <div class="info_background">
+    <div class="info_background" id="shrewInfo">
       <h2 class="Information Header" id="littleInfo1">Pygmy Shrew</h2>
 
       <iframe
         class="citing_media"
-        id="littleInfo2"
+        id="videoInfo"
         height="300px"
         src="https://www.youtube.com/embed/1wgcZjeEUIM"
         title="YouTube video player"
@@ -174,11 +174,11 @@
         allowfullscreen
       ></iframe>
 
-      <p class="heart_info" id="littleInfo3">
+      <p class="heart_info" id="littleInfo">
         1. The Pygmy shew has one of the fastest heart rates of the animal
         kingdom with a mindboggling 1200 beats per minute!
       </p>
-      <p class="heart_info" id="littleInfo4">
+      <p class="heart_info" id="mediumInfo">
         2. Along with a fast heart rate the pygmy shrew is one of the shortest
         animals being roughly 1.5 to 2 inches and only having a life span of 11
         months.
@@ -195,12 +195,12 @@
 
     <!-- Information Whale -->
 
-    <div class="info_background">
-      <h2 class="Information Header" id="littleInfo5">Whale</h2>
+    <div class="info_background" id="whaleInfo">
+      <h2 class="Information Header">Whale</h2>
 
       <iframe
         class="citing_media"
-        id="littleInfo6"
+        id="videoInfo"
         height="300px"
         src="https://www.youtube.com/embed/hxL4XkHVSxg"
         title="YouTube video player"
@@ -209,13 +209,13 @@
         allowfullscreen
       ></iframe>
 
-      <p class="heart_info" id="littleInfo7">
+      <p class="heart_info" id="littleInfo">
         1. Whales have one of the slowest heart rates of the animal kingdom,
         <br />
         with the minimum range being a dangerous 2 beats per minute and a max of
         35 beats per minute!
       </p>
-      <p class="heart_info" id="littleInfo8">
+      <p class="heart_info" id="mediumInfo">
         2. Because of the oxygen levels within the ocean whales constantly have
         alterations in heart rate. <br />
         Going towards the waters surface rises a whale's heart rate and diving
@@ -233,12 +233,12 @@
 
     <!-- Information Ant -->
 
-    <div class="info_background">
+    <div class="info_background" id="antInfo">
       <h2 class="Information Header" id="littleInfo9">Ants</h2>
 
       <iframe
         class="citing_media"
-        id="littleInfo10"
+        id="videoInfo"
         height="300px"
         src="https://www.youtube.com/embed/duSxtQD_6uY"
         title="YouTube video player"
@@ -247,12 +247,12 @@
         allowfullscreen
       ></iframe>
 
-      <p class="heart_info" id="littleInfo11">
+      <p class="heart_info" id="littleInfo">
         1.Ants have a heart rate range that is very familiar to our own. <br />
         More specifically the range of an Ant has a heart range ranging from 46
         to 46 beats per minute.
       </p>
-      <p class="heart_info" id="littleInfo12">
+      <p class="heart_info" id="mediumInfo">
         2. Although there are many species of ants, there is no dramatic change
         varying from species to species. <br />
         All seem to maintain an average of 53.5 beats per minute.
@@ -269,22 +269,22 @@
 
     <!-- Information Normal -->
 
-    <div class="info_background">
-      <h2 class="Information Header" id="littleInfo13">Average Human Heart Rate</h2>
+    <div class="info_background" id="humanInfo">
+      <h2 class="Information Header">Average Human Heart Rate</h2>
 
-      <iframe id="littleInfo14" width="560" height="315" src="https://www.youtube.com/embed/GMBSU-2GK3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe id="videoInfo" width="560" height="315" src="https://www.youtube.com/embed/GMBSU-2GK3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
       <p>
-        <a id="littleInfo04" href="https://giphy.com/gifs/love-heart-heartbeat-9x2SEdH6d13tKgCboq"
+        <a href="https://giphy.com/gifs/love-heart-heartbeat-9x2SEdH6d13tKgCboq"
           >via GIPHY</a
         >
       </p>
 
-      <p class="heart_info" id="littleInfo15">
+      <p class="heart_info" id="littleInfo">
         1. Typically the resting rate of the human heart ranges from 60 to 100
         BPM.
       </p>
-      <p class="heart_info" id="littleInfo16">
+      <p class="heart_info" id="mediumInfo">
         2. If your heart rate is not beating at a typical pace please contact your doctor, you may have <b>arrhythmia</b>.  
       </p>
 
@@ -299,19 +299,19 @@
 
     <!-- Information Max -->
 
-    <div class="info_background">
-      <h2 class="Information Header" id="littleInfo17">Maximum Human Heart Rate</h2>
+    <div class="info_background" id="maxHumanInfo">
+      <h2 class="Information Header">Maximum Human Heart Rate</h2>
 
-    <iframe id="littleInfo18" width="560" height="315" src="https://www.youtube.com/embed/wWGulLAa0O0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe id="videoInfo" width="560" height="315" src="https://www.youtube.com/embed/wWGulLAa0O0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-      <p><a href="https://giphy.com/gifs/35GIhjJzAR5Wsne9TT" id="littleInfo06">via GIPHY</a></p>
+      <p><a href="https://giphy.com/gifs/35GIhjJzAR5Wsne9TT">via GIPHY</a></p>
       </p>
 
    
-      <p class="heart_info" id="littleInfo19">
+      <p class="heart_info" id="littleInfo">
         1. Heart rates increase during excerise. To find your maximum heart rate subtract your age from 220.  
       </p>
-      <p class="heart_info" id="littleInfo20">
+      <p class="heart_info" id="mediumInfo">
         2.If your heart rate is consistently above the average level you may wish to seek your doctor about potential <b>cardiomyopathy</b>.   
       </p>
 
@@ -335,17 +335,16 @@
 
       <!-- Information Death -->
 
-      <div class="info_background">
-        <h2 class="Information Header" id="littleInfo21">Death</h2>
+      <div class="info_background" id="deathInfo">
+        <h2 class="Information Header">Death</h2>
   
-        <iframe id="littleInfo22" allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/Zqw1k4m930mKrYXGup/video" width="480"></iframe>
-        <p><a href="https://giphy.com/gifs/35GIhjJzAR5Wsne9TT" id="littleInfo08">via GIPHY</a></p>
-        </p>
-  
-        <p class="heart_info" id="littleInfo23">
+        <iframe id="videoInfo" allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/Zqw1k4m930mKrYXGup/video" width="480"></iframe>
+        <p><a href="https://giphy.com/gifs/35GIhjJzAR5Wsne9TT" id="gifInfo">via GIPHY</a></p>
+
+        <p class="heart_info" id="littleInfo">
           1. No living creature can survive too long with a heart rate of 0.  
         </p>
-        <p class="heart_info" id="littleInfo24">
+        <p class="heart_info" id="mediumInfo">
           2. If you find that your heart has stopped for an abnormal period of time please seek a medical professional.  
         </p>
   
@@ -361,15 +360,15 @@
 
        <!-- Information Sleep -->
 
-       <div class="info_background">
+       <div class="info_background" id="sleepInfo">
         <h2 class="Information Header" id="littleInfo25">Sleeping</h2>
   
-        <iframe id="littleInfo26" width="560" height="315" src="https://www.youtube.com/embed/2IBfUUgiP9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="videoInfo" width="560" height="315" src="https://www.youtube.com/embed/2IBfUUgiP9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   
-        <p class="heart_info" id="littleInfo27">
+        <p class="heart_info" id="littleInfo">
           1. When sleeping, humans have a heart rate typically ranging from 40 to 50 BPM.  
         </p>
-        <p class="heart_info" id="littleInfo28">
+        <p class="heart_info" id="mediumInfo">
           2. Some individuals with <b>atrial fibrillation</b> may experience sleep apnea.   
         </p>
   
