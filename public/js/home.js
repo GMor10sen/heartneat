@@ -53,8 +53,10 @@ window.addEventListener('load', function() {
 			handleAnimationChange(images.children[0], 'tomb_animation');
 	  	} else if ((rangeslider.value >= 2) && (rangeslider.value <= 35)) {
 			handleAnimationChange(images.children[4], 'whale_animation');
-	  	} else if ((rangeslider.value > 35) && (rangeslider.value <= 55)) {
+	  	} else if ((rangeslider.value > 35) && (rangeslider.value <= 45)) {
 			handleAnimationChange(images.children[1], 'ants_animation');
+		} else if ((rangeslider.value > 45) && (rangeslider.value <= 55)) {
+			handleAnimationChange(images.children[7], 'ants_animation_sleep');
 	  	}
 	  	else if((rangeslider.value > 55) && (rangeslider.value <= 100)) {
 			handleAnimationChange(images.children[2], 'heart');
@@ -89,7 +91,7 @@ window.addEventListener('load', function() {
 			images.children[4].style.display = 'block';
 			handleAnimationChange(images.children[4], 'whale_animation');
 			oldRange = 'whale range';
-	  	} else if ((rangeslider.value > 35) && (rangeslider.value <= 55)) {
+	  	} else if ((rangeslider.value > 35) && (rangeslider.value <= 45)) {
 			//ant animation
 			if (oldRange != 'ants range') {
 				handleInformationDisplay();
@@ -97,6 +99,15 @@ window.addEventListener('load', function() {
 	  		images.children[1].style.display = 'block';
 			handleAnimationChange(images.children[1], 'ants_animation');
 			oldRange = 'ants range';
+	  	}
+	    else if ((rangeslider.value > 45) && (rangeslider.value <= 55)) {
+			//ant animation
+			if (oldRange != 'ants sleep range') {
+				handleInformationDisplay();
+			}
+		  	images.children[7].style.display = 'block';
+			handleAnimationChange(images.children[7], 'ants_animation_sleep');
+			oldRange = 'ants sleep range';
 	  	}
 	  	else if((rangeslider.value > 55) && (rangeslider.value <= 100)){
 			//resting human heart
@@ -131,6 +142,16 @@ window.addEventListener('load', function() {
 });	
 
 function handleAnimationChange(element, changingClass) {
+	if (changingClass == 'ants_animation_sleep') {
+		if (document.getElementById('amimation_switch').checked) {
+			element.children[0].classList.remove('ants_animation');
+			element.children[1].classList.remove('ZZZ_animation');
+		}
+		else {
+			element.children[0].classList.add('ants_animation');
+			element.children[1].classList.add('ZZZ_animation');
+		}
+	}
 	if (document.getElementById('amimation_switch').checked) {
 		element.classList.remove(changingClass);
 	}
