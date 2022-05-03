@@ -285,6 +285,7 @@
 /* media width video with and such */
 .citing_media{
   width: 400px;
+  margin: auto;
 }
 
 /* move media to left side without affecting text */
