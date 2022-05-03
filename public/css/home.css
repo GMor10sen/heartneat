@@ -164,12 +164,34 @@
     transform: scaleX(0.8);
   }
 }
+/* Combo  for Ant and Sleep*/
+.ZZZ_combo{
+  width: 100px;
+  height: 100px;
+  animation-name: Shake;
+  margin: auto;
+  transition: transform 1s linear;
+}
+.ants_combo {
+  padding-top: 15px;
+  width: 150px;
+  height: 100px;
+  margin: auto;
+  transition: transform 1s linear;
+}
+
+.sleeping_and_ant{
+  width: 150px;
+  height: 160px;
+  margin: auto;
+}
 
 /* Ants  Animation */
 .ants {
   width: 150px;
   height: 120px;
   margin: 40px auto 0px auto;
+  animation-name: bug;
   transition: transform 1s linear;
 }
 
@@ -221,9 +243,12 @@
 .ZZZ{
   width: 150px;
   height: 160px;
+  animation-name: ZZZ_animation;
   margin: 40px auto 0px auto;
   transition: transform 1s linear;
 }
+
+
 
 .ZZZ_animation {
   animation-name: Shake;
