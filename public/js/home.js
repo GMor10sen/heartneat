@@ -27,6 +27,43 @@ window.addEventListener('load', function() {
 	var images = document.getElementById("sliderImages");
 	
 	var oldRange = 'human range';
+	document.getElementById('info_switch').addEventListener('change', (event) => {
+		var displayBoxes = this.document.querySelectorAll('.info_background');
+		if (document.getElementById('info_switch').checked) {
+			handleInformationDisplay();
+		}
+		else {
+			displayBoxes.forEach(element => {
+				element.style.display = 'none';
+			});
+		}
+	});
+	this.document.getElementById('Little').addEventListener('change', (event) => {
+		handleInformationDisplay();
+	});
+	this.document.getElementById('Medium').addEventListener('change', (event) => {
+		handleInformationDisplay();
+	});
+	this.document.getElementById('Lot').addEventListener('change', (event) => {
+		handleInformationDisplay();
+	});
+
+	this.document.getElementById('amimation_switch').addEventListener('change', (event) => {
+	  	if (rangeslider.value < 2) {
+			handleAnimationChange(images.children[0], 'tomb_animation');
+	  	} else if ((rangeslider.value >= 2) && (rangeslider.value <= 35)) {
+			handleAnimationChange(images.children[4], 'whale_animation');
+	  	} else if ((rangeslider.value > 35) && (rangeslider.value <= 55)) {
+			handleAnimationChange(images.children[1], 'ants_animation');
+	  	}
+	  	else if((rangeslider.value > 55) && (rangeslider.value <= 100)) {
+			handleAnimationChange(images.children[2], 'heart');
+	  	} else if((rangeslider.value > 100) && (rangeslider.value <= 180)) {
+			handleAnimationChange(images.children[3], 'weight_animation');
+	  	} else if((rangeslider.value > 750) && (rangeslider.value <= 1200)) {
+			handleAnimationChange(images.children[5], 'shrew_animation');
+        }
+	});
 
 	rangeslider.addEventListener('input', function(event) {
 	
@@ -38,7 +75,7 @@ window.addEventListener('load', function() {
 	  	i = Number(this.value) - 1;
 	  	if (rangeslider.value < 2) {
 			//tombstone animation
-			if (oldRange != 'tomb range') {
+			if (oldRange != 'tomb range') {-
 				handleInformationDisplay();
 			}
 			images.children[0].style.display = 'block';
@@ -136,9 +173,11 @@ const startVibrate = (isSound) => {
 	clearInterval(vibrateIntervalId);
 	clearInterval(soundIntervalId);
 	var value = Math.floor(1000 / (slider.value / 60));
-	console.log("Vibrating at: " + slider.value + " BPM");
 	if (isSound){
 		navigator.vibrate(0);
+		if (slider.value > 180) {
+			return;
+		}
 		heartbeat_audio.playbackRate = Math.floor(slider.value / 60) > 16 ? 16 : Math.floor(slider.value / 60);
 		soundIntervalId = setInterval(() => heartbeat_audio.play(), value);
 	}
@@ -152,6 +191,9 @@ const stopVibrate = () => {
 	var value = Math.floor(1000 / (slider.value / 60));
 	console.log("Stopping Vibrating");
     navigator.vibrate(0);
+	if (slider.value > 180) {
+		return;
+	}
 	soundIntervalId = setInterval(() => heartbeat_audio.play(), value);
 };
 
@@ -162,6 +204,9 @@ const changeVibrate = (val, isSound) => {
 	console.log("Changing vibration to: " + val + " BPM");
 	if (isSound){
 		navigator.vibrate(0);
+		if (slider.value > 180) {
+			return;
+		}
 		heartbeat_audio.playbackRate = Math.floor(val / 60) > 16 ? 16 : Math.floor(val / 60);
 		soundIntervalId = setInterval(() => heartbeat_audio.play(), value);
 	}
@@ -223,6 +268,10 @@ function getInformationID () {
 }
 
 function handleInformationDisplay() {
+	//terminate info display if switch is selected.
+	if (!document.getElementById('info_switch').checked) {
+		return;
+	}
 	const documentElementContainers = document.querySelectorAll('.info_background');
 	//clear all info_background containers
 	documentElementContainers.forEach(element => {
@@ -247,3 +296,4 @@ function handleInformationDisplay() {
 		elementInQuestion.querySelector('#mediumInfo').style.display = 'block';
 	}
 };
+
