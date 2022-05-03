@@ -1,4 +1,5 @@
-
+/* Slider Modifications On Homepage */
+/* Slider will be purpleish */
 .slider{
   -webkit-appearance: none;
   width: 75%;
@@ -10,15 +11,18 @@
   transition: opacity 0.2s;
 }
 
+/* When a user hovers over the slider the cusor will turn to a pointer */
 .slider:hover {
   cursor: pointer;
 }
 
+/* The slider needs to be in the center of the homepage */
 .Slider_Container{
   margin:  50px auto 50px auto;
   text-align:center;
 }
 
+/* The Slider will have a custom heart icon */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -29,6 +33,7 @@
   cursor: pointer;
 }
 
+/* The Slider will have a custom heart icon pt.2 */
 .slider::-moz-range-thumb {
   background: url("SmallHeart.png");
   cursor: pointer;
@@ -212,6 +217,7 @@
   }
 }
 
+/* Sleeping Animation */
 .ZZZ{
   width: 150px;
   height: 160px;
@@ -269,34 +275,30 @@
  position: relative;
 }
 
+/* main text of heart information */
 .heart_info{
   position: relative;
   font-weight: 500;
   font-size: large;
 }
 
-.citing_text{
-  font-size: small;
-  font-weight: 600;
-  color: blue;
-  margin: auto;
-  text-align: center;
-}
-
+/* media width video with and such */
 .citing_media{
   width: 400px;
 }
 
+/* move media to left side without affecting text */
 .left{
   float: left;
   margin-left: 20px;
 }
 
-
+/* move media to right side without affecting text */
 .right{
   float: right; 
 }
 
+/* round corners on media edges */
 .round{
   border-radius: 50%;
 }

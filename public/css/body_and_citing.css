@@ -1,0 +1,27 @@
+/* Disables Scrolling */
+/* html, body {margin: 0; height: 100%; overflow: hidden} */
+
+/* Certain word coloring when atrributing sources*/
+.source{
+    text-align: center;
+    opacity: 0.8;
+    color: darkblue;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+  }
+
+  /* Specific citing text for information in Homepage  */
+  .citing_text{
+    font-size: small;
+    font-weight: 600;
+    color: blue;
+    margin: auto;
+    text-align: center;
+  }
+
+/* Overlaid elements are not impacted by other elements in the website */
+.overlaid{
+  position: absolute;
+
+}
+  

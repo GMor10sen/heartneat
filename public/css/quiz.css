@@ -1,6 +1,9 @@
+/* Header decoration  */
 h2{
   font-weight: 600;
 }
+
+/* color and weight designs for specific paragraph within the quiz page */
 .quiz_source{
     margin: 0 auto;
     text-align: center;
@@ -11,6 +14,7 @@ h2{
     font-size: medium;
   }
 
+  /* Box surrounding quiz  */
   .Question_Box{
     border: 20px double purple;
     width: 50%;
@@ -18,12 +22,14 @@ h2{
     margin: auto;
   }
 
+  /* Most paragraphs in quiz need to be larger */
   .Question_Box > p{
     font-size: x-large; 
     font-weight: 550;
     padding-left: 15px;
   }
  
+  /* This is the input box for after the main quiz */
   .Input_Paragraph {
     width: 80%;
     height: 30%;
@@ -31,6 +37,7 @@ h2{
     border: 8px double  rgb(223, 88, 111);
   }
 
+  /* Center everything after the quiz box on the main page */
   .quiz_conclusion{
       margin: auto;
       align-items: center;
