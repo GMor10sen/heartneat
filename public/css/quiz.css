@@ -17,7 +17,7 @@ h2{
   /* Box surrounding quiz  */
   .Question_Box{
     border: 20px double purple;
-    width: 50%;
+    width: 80%;
     text-align: center;
     margin: auto;
   }
