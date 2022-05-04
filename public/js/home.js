@@ -24,7 +24,10 @@ window.addEventListener('load', function() {
 	else {
 		startVibrate(false);
 	}
+	
+	
 	var images = document.getElementById("sliderImages");
+	
 	
 	var oldRange = 'human range';
 	document.getElementById('info_switch').addEventListener('change', (event) => {
@@ -69,8 +72,16 @@ window.addEventListener('load', function() {
 
 	rangeslider.addEventListener('input', function(event) {
 	
+
+		//If the animal info button unchecked make a 
+		//boolean that will negate all animal changes 
+		if (!document.getElementById('info_switch').checked) 	
+			Animal_Display = false;  
+		else
+			Animal_Display = true; 
+
+
 	  	//information handling, only change if a change is needed
-		  
 	  	for (var i = 0; i < images.children.length; i++) {
 			images.children[i].style.display = 'none';
 	  	}
@@ -83,7 +94,7 @@ window.addEventListener('load', function() {
 			images.children[0].style.display = 'block';
 			handleAnimationChange(images.children[0], 'tomb_animation');
 			oldRange = 'tomb range';
-	  	} else if ((rangeslider.value >= 2) && (rangeslider.value <= 35)) {
+	  	} else if ((rangeslider.value >= 2) && (rangeslider.value <= 35) && Animal_Display == true) {
 			//whale animation
 			if (oldRange != 'whale range') {
 				handleInformationDisplay();
@@ -91,16 +102,27 @@ window.addEventListener('load', function() {
 			images.children[4].style.display = 'block';
 			handleAnimationChange(images.children[4], 'whale_animation');
 			oldRange = 'whale range';
-	  	} else if ((rangeslider.value > 35) && (rangeslider.value <= 45)) {
+	  	} 
+		// else if ((rangeslider.value > 35) && (rangeslider.value <= 54) && Animal_Display == true) {
+		// 	//ant animation
+		// 	if (oldRange != 'ants range') {
+		// 		handleInformationDisplay();
+		// 	}
+	  	// 	images.children[1].style.display = 'block';
+		// 	handleAnimationChange(images.children[1], 'ants_animation');
+		// 	oldRange = 'ants range';
+	  	// }
+
+		else if ((rangeslider.value > 35) && (rangeslider.value <= 54) && Animal_Display == false) {
 			//ant animation
-			if (oldRange != 'ants range') {
+			if (oldRange != 'ants sleep range') {
 				handleInformationDisplay();
 			}
-	  		images.children[1].style.display = 'block';
-			handleAnimationChange(images.children[1], 'ants_animation');
-			oldRange = 'ants range';
+		  	images.children[7].style.display = 'block';
+			handleAnimationChange(images.children[7], 'ants_animation_sleep');
+			oldRange = 'ants sleep range';
 	  	}
-	    else if ((rangeslider.value > 45) && (rangeslider.value <= 55)) {
+	    else if ((rangeslider.value > 35) && (rangeslider.value <= 54) && Animal_Display == true) {
 			//ant animation
 			if (oldRange != 'ants sleep range') {
 				handleInformationDisplay();
@@ -125,7 +147,8 @@ window.addEventListener('load', function() {
 			images.children[3].style.display = 'block';
 			handleAnimationChange(images.children[3], 'weight_animation');
 			oldRange = 'exercise range';
-	  	} else if((rangeslider.value > 750) && (rangeslider.value <= 1200)){
+	  	}
+		   else if((rangeslider.value > 750) && (rangeslider.value <= 1200) && Animal_Display == true){
 			//pigmy shrew will go here
 			if (oldRange != 'shrew range') {
 				handleInformationDisplay();
@@ -289,32 +312,70 @@ function getInformationID () {
 }
 
 function handleInformationDisplay() {
-	//terminate info display if switch is selected.
-	if (!document.getElementById('info_switch').checked) {
-		return;
-	}
+	
+	
+	
+	console.log("Information ID selected: " + getInformationID());
+	
+	//terminate info for Animal display if switch is unchecked by returning early 
+	if (!document.getElementById('info_switch').checked && (getInformationID() == "whaleInfo" || getInformationID() == "shrewInfo")){
+			return;
+	}	
+
+
 	const documentElementContainers = document.querySelectorAll('.info_background');
 	//clear all info_background containers
 	documentElementContainers.forEach(element => {
 		element.style.display = 'none';
 	});
-	console.log("Information ID selected: " + getInformationID());
+
+
+
 	var elementInQuestion = document.getElementById(getInformationID());
+	
+	if (getInformationID() == 'antInfo'){
+		var elementInQuestion2 = document.getElementById("sleepInfo");
+		elementInQuestion2.style.display = 'block';
+	}
+	if (getInformationID() == 'sleepInfo'){
+		var elementInQuestion2 = document.getElementById("antInfo");
+		elementInQuestion2.style.display = 'block';
+	}
+	
 	elementInQuestion.style.display = 'block';
 	if (document.getElementById('Little').checked) {
 		//little display
 		elementInQuestion.querySelector('#mediumInfo').style.display = 'none';
 		elementInQuestion.querySelector('#videoInfo').style.display = 'none';
+
+		//If animal display on then show both sleeping and ant 	
+		if (document.getElementById('info_switch').checked && (getInformationID() == 'sleepInfo' || getInformationID() == 'antInfo')){
+			elementInQuestion2.querySelector('#mediumInfo').style.display = 'none';
+			elementInQuestion2.querySelector('#videoInfo').style.display = 'none';
+		}
 	}
 	else if (document.getElementById('Medium').checked) {
 		//medium display
 		elementInQuestion.querySelector('#videoInfo').style.display = 'none';
 		elementInQuestion.querySelector('#mediumInfo').style.display = 'block';
+
+		//If animal display on then show both sleeping and ant 		
+		if (document.getElementById('info_switch').checked && (getInformationID() == 'sleepInfo' || getInformationID() == 'antInfo')){
+			elementInQuestion2.querySelector('#videoInfo').style.display = 'none';
+			elementInQuestion2.querySelector('#mediumInfo').style.display = 'block';
+		}
 	}
 	else if  (document.getElementById('Lot').checked) {
 		//lot display
 		elementInQuestion.querySelector('#videoInfo').style.display = 'block';
 		elementInQuestion.querySelector('#mediumInfo').style.display = 'block';
+
+		if (document.getElementById('info_switch').checked && (getInformationID() == 'sleepInfo' || getInformationID() == 'antInfo')){
+			elementInQuestion2.querySelector('#videoInfo').style.display = 'block';
+			elementInQuestion2.querySelector('#mediumInfo').style.display = 'block';
+		}
+
 	}
+
 };
 
