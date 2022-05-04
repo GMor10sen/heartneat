@@ -31,14 +31,13 @@ window.addEventListener('load', function() {
 	
 	var oldRange = 'human range';
 	document.getElementById('info_switch').addEventListener('change', (event) => {
-		var displayBoxes = this.document.querySelectorAll('.info_background');
 		if (document.getElementById('info_switch').checked) {
+			changeSliderVal(true);
 			handleInformationDisplay();
 		}
 		else {
-			displayBoxes.forEach(element => {
-				element.style.display = 'none';
-			});
+			changeSliderVal(false);
+			handleInformationDisplay();
 		}
 	});
 	this.document.getElementById('Little').addEventListener('change', (event) => {
@@ -103,24 +102,15 @@ window.addEventListener('load', function() {
 			handleAnimationChange(images.children[4], 'whale_animation');
 			oldRange = 'whale range';
 	  	} 
-		// else if ((rangeslider.value > 35) && (rangeslider.value <= 54) && Animal_Display == true) {
-		// 	//ant animation
-		// 	if (oldRange != 'ants range') {
-		// 		handleInformationDisplay();
-		// 	}
-	  	// 	images.children[1].style.display = 'block';
-		// 	handleAnimationChange(images.children[1], 'ants_animation');
-		// 	oldRange = 'ants range';
-	  	// }
 
 		else if ((rangeslider.value > 35) && (rangeslider.value <= 54) && Animal_Display == false) {
-			//ant animation
-			if (oldRange != 'ants sleep range') {
+			//sleep only
+			if (oldRange != 'sleep range') {
 				handleInformationDisplay();
 			}
-		  	images.children[7].style.display = 'block';
-			handleAnimationChange(images.children[7], 'ants_animation_sleep');
-			oldRange = 'ants sleep range';
+		  	images.children[6].style.display = 'block';
+			handleAnimationChange(images.children[6], 'ZZZ_animation');
+			oldRange = 'sleep range';
 	  	}
 	    else if ((rangeslider.value > 35) && (rangeslider.value <= 54) && Animal_Display == true) {
 			//ant animation
@@ -197,6 +187,19 @@ slider.oninput = function() {
 
 if (custom_bpm) {
 	custom_bpm.addEventListener('change', (event) => {
+		if (!document.getElementById('info_switch').checked) {
+			changed_value = event.target.value;
+			if (event.target.value > 200) {
+				changed_value = 200;
+				custom_bpm.value = 200;
+				slider.value = changed_value;
+			}
+			else {
+				slider.value = changed_value;
+			}
+			slider_output.innerHTML = changed_value;
+			return;
+		}
 		changed_value = event.target.value;
 		//adding a max of 3000 for the custom bpm becasue of limits of the phone vibration
 		if (changed_value > 3000) {
@@ -313,8 +316,6 @@ function getInformationID () {
 
 function handleInformationDisplay() {
 	
-	
-	
 	console.log("Information ID selected: " + getInformationID());
 	
 	//terminate info for Animal display if switch is unchecked by returning early 
@@ -335,11 +336,13 @@ function handleInformationDisplay() {
 	
 	if (getInformationID() == 'antInfo'){
 		var elementInQuestion2 = document.getElementById("sleepInfo");
-		elementInQuestion2.style.display = 'block';
 	}
 	if (getInformationID() == 'sleepInfo'){
 		var elementInQuestion2 = document.getElementById("antInfo");
-		elementInQuestion2.style.display = 'block';
+	}
+
+	if (!document.getElementById('info_switch').checked && (getInformationID() == 'antInfo')) {
+		elementInQuestion = document.getElementById('sleepInfo');
 	}
 	
 	elementInQuestion.style.display = 'block';
@@ -350,6 +353,7 @@ function handleInformationDisplay() {
 
 		//If animal display on then show both sleeping and ant 	
 		if (document.getElementById('info_switch').checked && (getInformationID() == 'sleepInfo' || getInformationID() == 'antInfo')){
+			elementInQuestion2.style.display = 'block';
 			elementInQuestion2.querySelector('#mediumInfo').style.display = 'none';
 			elementInQuestion2.querySelector('#videoInfo').style.display = 'none';
 		}
@@ -361,6 +365,7 @@ function handleInformationDisplay() {
 
 		//If animal display on then show both sleeping and ant 		
 		if (document.getElementById('info_switch').checked && (getInformationID() == 'sleepInfo' || getInformationID() == 'antInfo')){
+			elementInQuestion2.style.display = 'block';
 			elementInQuestion2.querySelector('#videoInfo').style.display = 'none';
 			elementInQuestion2.querySelector('#mediumInfo').style.display = 'block';
 		}
@@ -371,6 +376,7 @@ function handleInformationDisplay() {
 		elementInQuestion.querySelector('#mediumInfo').style.display = 'block';
 
 		if (document.getElementById('info_switch').checked && (getInformationID() == 'sleepInfo' || getInformationID() == 'antInfo')){
+			elementInQuestion2.style.display = 'block';
 			elementInQuestion2.querySelector('#videoInfo').style.display = 'block';
 			elementInQuestion2.querySelector('#mediumInfo').style.display = 'block';
 		}
@@ -379,3 +385,15 @@ function handleInformationDisplay() {
 
 };
 
+function changeSliderVal(includeAnimals) {
+	if (includeAnimals) {
+		slider.value = 60;
+		slider.max = 1200;
+		slider_output.innerHTML = 60
+	}
+	else {
+		slider.value = 60;
+		slider.max = 200;
+		slider_output.innerHTML = 60
+	}
+}
