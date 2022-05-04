@@ -21,32 +21,40 @@
     <div class="Menu">
       <h2 style="font-size: 35px">MENU</h2>
       <div id="myLinks">
-
         <!-- Information Selection  -->
         <h3 class="Menu_Option">How Much Information Would You Like?</h3>
-        
-        <div class="spacer_square">      
-          <label class="container">Little
-            <input type="radio" id="Little" name="info_amount" value="30"/>
+
+        <div class="spacer_square">
+          <label class="container"
+            >Little
+            <input type="radio" id="Little" name="info_amount" value="30" />
             <span class="checkmark"></span>
           </label>
-          
-          <label class="container">Medium
-            <input type="radio" id="Medium" name="info_amount" value="60" checked="true"/>
+
+          <label class="container"
+            >Medium
+            <input
+              type="radio"
+              id="Medium"
+              name="info_amount"
+              value="60"
+              checked="true"
+            />
             <span class="checkmark"></span>
           </label>
-          
-          <label class="container">Lots
-            <input type="radio" id="Lot" name="info_amount" value="100"/>
+
+          <label class="container"
+            >Lots
+            <input type="radio" id="Lot" name="info_amount" value="100" />
             <span class="checkmark"></span>
           </label>
         </div>
 
         <!-- Switch 1  -->
-      
+
         <label class="switch">
           <label for="checkbox"></label>
-          <input type="checkbox" id="amimation_switch"/>
+          <input type="checkbox" id="amimation_switch" />
           <span class="slider_switch"></span>
         </label>
         <p>Turn Off Animations</p>
@@ -58,16 +66,16 @@
           <span class="slider_switch"></span>
         </label>
         <p>Replace Vibration with Sound</p>
-        
+
         <!-- Switch 3  -->
         <label class="switch">
           <label for="checkbox"></label>
-          <input type="checkbox"  checked="checked" id="info_switch"/>
+          <input type="checkbox" checked="checked" id="info_switch" />
           <span class="slider_switch"></span>
         </label>
         <p>Include Animal Information</p>
       </div>
-      
+
       <!-- Hamburger Menu -->
       <ul class="w3-ul">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -76,7 +84,6 @@
       </ul>
     </div>
 
-    
     <!-- Button Navigation on Homepage -->
     <div class="Button_Options">
       <a href="/home/index">
@@ -91,12 +98,9 @@
         />
       </a>
     </div>
-  
 
     <!-- Array of images and animations to place within main circle -->
-    <div class="imageShow" id="sliderImages" >
- 
-
+    <div class="imageShow" id="sliderImages">
       <!-- Tombstone animation and image -->
       <img
         class="tomb heart_element tomb_animation"
@@ -112,7 +116,6 @@
         style="display: none"
       />
 
-      
       <!-- Heart animation and image -->
       <img class="heart heart_element" src="./images/HeartOnly.png" alt="" />
       <img
@@ -130,35 +133,32 @@
       />
       <!-- Shrew animation and image -->
       <img
-      class="shrew heart_element shrew_animation"
-      src="./images/Shrew.png"
-      alt=""
-      style="display: none"
-      />
-     <!-- Sleeping animation and image -->
-      <img
-      class="ZZZ heart_element ZZZ_animation"
-      src="./images/Sleeping.png"
-      alt=""
-      style="display: none"
-      />
-         
-      <!-- Ants & Sleeping animation and image -->
-      <div class="sleeping_and_ant"style="display: none">
-        <img
-        class="ants_combo ants_animation heart_element"
-        src="./images/Ants.png"
+        class="shrew heart_element shrew_animation"
+        src="./images/Shrew.png"
         alt=""
-        />
-        <img
-        class="ZZZ_combo ZZZ_animation heart_element"
+        style="display: none"
+      />
+      <!-- Sleeping animation and image -->
+      <img
+        class="ZZZ heart_element ZZZ_animation"
         src="./images/Sleeping.png"
         alt=""
+        style="display: none"
+      />
 
+      <!-- Ants & Sleeping animation and image -->
+      <div class="sleeping_and_ant" style="display: none">
+        <img
+          class="ants_combo ants_animation heart_element"
+          src="./images/Ants.png"
+          alt=""
+        />
+        <img
+          class="ZZZ_combo ZZZ_animation heart_element"
+          src="./images/Sleeping.png"
+          alt=""
         />
       </div>
-
-
     </div>
     <br />
 
@@ -284,7 +284,7 @@
       <p class="heart_info" id="littleInfo">
         1.Ants have a heart rate range that is very familiar to our own. <br />
         More specifically the range of an Ant has a heart range ranging from 46
-        to 46 beats per minute.
+        to 55 beats per minute without exersion.
       </p>
       <p class="heart_info" id="mediumInfo">
         2. Although there are many species of ants, there is no dramatic change
@@ -306,29 +306,32 @@
     <div class="info_background" id="humanInfo">
       <h2 class="Information Header">Average Human Heart Rate</h2>
 
-      <iframe class="citing_media" id="videoInfo" width="560" height="315" src="https://www.youtube.com/embed/GMBSU-2GK3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      <p>
-        <a href="https://giphy.com/gifs/love-heart-heartbeat-9x2SEdH6d13tKgCboq"
-          >via GIPHY</a
-        >
-      </p>
+      <iframe
+        class="citing_media"
+        id="videoInfo"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/GMBSU-2GK3E"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
 
       <p class="heart_info" id="littleInfo">
         1. Typically the resting rate of the human heart ranges from 60 to 100
         BPM.
       </p>
       <p class="heart_info" id="mediumInfo">
-        2. If your heart rate is not beating at a typical pace please contact your doctor, you may have <b>arrhythmia</b>.  
+        2. If your heart rate is not beating at a typical pace please contact
+        your doctor, you may have <b>arrhythmia</b>.
       </p>
 
       <!-- Button -->
-      <a
-        href="https://www.cdc.gov/heartdisease/atrial_fibrillation.htm"
-      >
+      <a href="https://www.cdc.gov/heartdisease/atrial_fibrillation.htm">
         <button class="heart_button" type="button">Learn More</button>
       </a>
-      <p class="citing_text" id="littleInfo05">Video by National Geographic </p>
+      <p class="citing_text" id="littleInfo05">Video by National Geographic</p>
     </div>
 
     <!-- Information Max -->
@@ -336,17 +339,25 @@
     <div class="info_background" id="maxHumanInfo">
       <h2 class="Information Header">Maximum Human Heart Rate</h2>
 
-    <iframe class="citing_media" id="videoInfo" width="560" height="315" src="https://www.youtube.com/embed/wWGulLAa0O0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe
+        class="citing_media"
+        id="videoInfo"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/wWGulLAa0O0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
 
-      <p><a href="https://giphy.com/gifs/35GIhjJzAR5Wsne9TT">via GIPHY</a></p>
-      </p>
-
-   
       <p class="heart_info" id="littleInfo">
-        1. Heart rates increase during excerise. To find your maximum heart rate subtract your age from 220.  
+        1. Heart rates increase during excerise. To find your maximum heart rate
+        subtract your age from 220.
       </p>
       <p class="heart_info" id="mediumInfo">
-        2.If your heart rate is consistently above the average level you may wish to seek your doctor about potential <b>cardiomyopathy</b>.   
+        2.If your heart rate is consistently above the average level you may
+        wish to seek your doctor about potential <b>cardiomyopathy</b>.
       </p>
 
       <!-- Button -->
@@ -356,64 +367,86 @@
         <button class="heart_button" type="button">Excerise</button>
       </a>
 
-     <br>
-      <a
-        href="https://www.cdc.gov/heartdisease/cardiomyopathy.htm"
-      >
+      <br />
+      <a href="https://www.cdc.gov/heartdisease/cardiomyopathy.htm">
         <button class="heart_button" type="button">Cardiomyopathy</button>
       </a>
-      <p class="citing_text" id="littleInfo07">Video by British Heart Foundation</p>
-
+      <p class="citing_text" id="littleInfo07">
+        Video by British Heart Foundation
+      </p>
     </div>
 
+    <!-- Information Death -->
 
-      <!-- Information Death -->
+    <div class="info_background" id="deathInfo">
+      <h2 class="Information Header">Death</h2>
 
-      <div class="info_background" id="deathInfo">
-        <h2 class="Information Header">Death</h2>
-  
-        <iframe class="citing_media" id="videoInfo" allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/Zqw1k4m930mKrYXGup/video" width="480"></iframe>
-        <p><a href="https://giphy.com/gifs/35GIhjJzAR5Wsne9TT" id="gifInfo">via GIPHY</a></p>
-
-        <p class="heart_info" id="littleInfo">
-          1. No living creature can survive too long with a heart rate of 0.  
-        </p>
-        <p class="heart_info" id="mediumInfo">
-          2. If you find that your heart has stopped for an abnormal period of time please seek a medical professional.  
-        </p>
-  
-        <!-- Button -->
-        <a
-          href="https://www.mhanational.org/bereavement-and-grief"
+      <iframe
+        class="citing_media"
+        id="videoInfo"
+        allow="fullscreen"
+        frameBorder="0"
+        height="270"
+        src="https://giphy.com/embed/Zqw1k4m930mKrYXGup/video"
+        width="480"
+      ></iframe>
+      <p>
+        <a href="https://giphy.com/gifs/35GIhjJzAR5Wsne9TT" id="gifInfo"
+          >via GIPHY</a
         >
-          <button class="heart_button" type="button">Learn More</button>
-        </a>
-        <p class="citing_text" id="littleInfo09">Gif by Janelle DeWitt</p>
-      </div>
+      </p>
 
+      <p class="heart_info" id="littleInfo">
+        1. No living creature can survive too long with a heart rate of 0.
+      </p>
+      <p class="heart_info" id="mediumInfo">
+        2. If you find that your heart has stopped for an abnormal period of
+        time please seek a medical professional.
+      </p>
 
-       <!-- Information Sleep -->
+      <!-- Button -->
+      <a href="https://www.mhanational.org/bereavement-and-grief">
+        <button class="heart_button" type="button">Learn More</button>
+      </a>
+      <p class="citing_text" id="littleInfo09">Gif by Janelle DeWitt</p>
+    </div>
 
-       <div class="info_background" id="sleepInfo">
-        <h2 class="Information Header" id="littleInfo25">Sleeping</h2>
-  
-        <iframe class="citing_media" id="videoInfo" width="560" height="315" src="https://www.youtube.com/embed/2IBfUUgiP9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
-        <p class="heart_info" id="littleInfo">
-          1. When sleeping, humans have a heart rate typically ranging from 40 to 50 BPM.  
-        </p>
-        <p class="heart_info" id="mediumInfo">
-          2. Some individuals with <b>atrial fibrillation</b> may experience sleep apnea.   
-        </p>
-  
-        <!-- Button -->
-        <a
-          href="https://www.sleepfoundation.org/physical-health/sleeping-heart-rate#:~:text=Average%20Heart%20Rates%20While%20Sleeping,vary%20depending%20on%20multiple%20factors."
-        >
-          <button class="heart_button" type="button">Learn More</button>
-        </a>
-        <p class="citing_text" id="littleInfo010">Image by American Heart Association</p>
-      </div>
+    <!-- Information Sleep -->
+
+    <div class="info_background" id="sleepInfo">
+      <h2 class="Information Header" id="littleInfo25">Sleeping</h2>
+
+      <iframe
+        class="citing_media"
+        id="videoInfo"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/2IBfUUgiP9I"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+
+      <p class="heart_info" id="littleInfo">
+        1. When sleeping, humans have a heart rate typically ranging from 40 to
+        50 BPM.
+      </p>
+      <p class="heart_info" id="mediumInfo">
+        2. Some individuals with <b>atrial fibrillation</b> may experience sleep
+        apnea.
+      </p>
+
+      <!-- Button -->
+      <a
+        href="https://www.sleepfoundation.org/physical-health/sleeping-heart-rate#:~:text=Average%20Heart%20Rates%20While%20Sleeping,vary%20depending%20on%20multiple%20factors."
+      >
+        <button class="heart_button" type="button">Learn More</button>
+      </a>
+      <p class="citing_text" id="littleInfo010">
+        Image by American Heart Association
+      </p>
+    </div>
 
     <!-- Scripts -->
     <script type="text/javascript" src="/js/home.js"></script>
