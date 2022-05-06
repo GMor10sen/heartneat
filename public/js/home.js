@@ -12,11 +12,12 @@ let soundIntervalId = 0;
 slider_output.innerHTML = slider.value;
 
 window.addEventListener('load', function() {
-
+	// variable to read the range from HomePage
 	var rangeslider = document.getElementById("BPM_Range");
 
 	handleInformationDisplay();
 
+	// if statement to set vibration on/off depending on device uses for application
 	if (!("vibrate" in navigator) || !isMobile()) {
 		document.getElementById('vibration_switch').checked = true;
 		//heartbeat_audio.play();
@@ -25,11 +26,12 @@ window.addEventListener('load', function() {
 		startVibrate(false);
 	}
 	
-	
+	//Variable to read HTML collection of animations to display on the HomePage
 	var images = document.getElementById("sliderImages");
 	
 	
 	var oldRange = 'human range';
+	//Calling handleInfo function depending on the radio buttons from the menu
 	document.getElementById('info_switch').addEventListener('change', (event) => {
 		if (document.getElementById('info_switch').checked) {
 			changeSliderVal(true);
@@ -50,6 +52,7 @@ window.addEventListener('load', function() {
 		handleInformationDisplay();
 	});
 
+	//Handling the animations to show depending on the slider range
 	this.document.getElementById('amimation_switch').addEventListener('change', (event) => {
 	  	if (rangeslider.value < 2) {
 			handleAnimationChange(images.children[0], 'tomb_animation');
@@ -154,6 +157,7 @@ window.addEventListener('load', function() {
 	});
 });	
 
+//Function to enable animations from the user's selection
 function handleAnimationChange(element, changingClass) {
 	if (changingClass == 'ants_animation_sleep') {
 		if (document.getElementById('amimation_switch').checked) {
@@ -173,6 +177,7 @@ function handleAnimationChange(element, changingClass) {
 	}
 }
 
+//Setting up Vibration only depending on toggle switch from Menu
 slider.oninput = function() {
 	slider_output.innerHTML = this.value;
 	var canVibrate = !document.getElementById('vibration_switch').checked;
@@ -215,7 +220,7 @@ if (custom_bpm) {
 	});
 }
 
-
+//setting up the sound frequency of the heartbeat
 const startVibrate = (isSound) => {
 	clearInterval(vibrateIntervalId);
 	clearInterval(soundIntervalId);
@@ -232,6 +237,7 @@ const startVibrate = (isSound) => {
 		vibrateIntervalId = setInterval(() => navigator.vibrate(50), value);
 	}
 };
+//at a certain range the mobile device will stop vibrating
 const stopVibrate = () => {
     clearInterval(vibrateIntervalId);
 	clearInterval(soundIntervalId);
@@ -244,6 +250,7 @@ const stopVibrate = () => {
 	soundIntervalId = setInterval(() => heartbeat_audio.play(), value);
 };
 
+//changing vibration of the device depending the slider value
 const changeVibrate = (val, isSound) => {
 	clearInterval(vibrateIntervalId);
 	clearInterval(soundIntervalId);
@@ -286,6 +293,7 @@ document.getElementById('vibration_switch').addEventListener('change', (event) =
 	console.log("Change event: " + event.currentTarget.checked);
 });
 
+//matching the type of device/navigator used
 const isMobile = () => {
     const nav = navigator.userAgent.toLowerCase();
     return (
@@ -293,6 +301,7 @@ const isMobile = () => {
     );
 };
 
+//Assigning names to the different slider values on the HomePage
 function getInformationID () {
 	switch (true) {
 		case (slider.value < 2):
@@ -385,6 +394,7 @@ function handleInformationDisplay() {
 
 };
 
+//"Include Animal Info" toggle button is on/off change slider range
 function changeSliderVal(includeAnimals) {
 	if (includeAnimals) {
 		slider.value = 60;
